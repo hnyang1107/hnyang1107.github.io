@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>hnyang&#39;s notes</title>
+  
+  <subtitle>hnyang 的博客</subtitle>
+  <link href="/atom.xml" rel="self"/>
+  
+  <link href="http://blog.hnyang.info/"/>
+  <updated>2019-01-10T06:36:30.636Z</updated>
+  <id>http://blog.hnyang.info/</id>
+  
+  <author>
+    <name>Haonan Yang</name>
+    
+  </author>
+  
+  <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>zzzzz</title>
+    <link href="http://blog.hnyang.info/2019/01/10/zzzzz/"/>
+    <id>http://blog.hnyang.info/2019/01/10/zzzzz/</id>
+    <published>2019-01-10T05:55:14.000Z</published>
+    <updated>2019-01-10T06:36:30.636Z</updated>
+    
+    <content type="html"><![CDATA[<img src="/2019/01/10/zzzzz/zzz.png" title="This is an example image"><p><img src="https://ws2.sinaimg.cn/large/006tNc79ly1fz1ggscgyyj30h8052t9k.jpg" alt=""></p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;img src=&quot;/2019/01/10/zzzzz/zzz.png&quot; title=&quot;This is an example image&quot;&gt;
+&lt;p&gt;&lt;img src=&quot;https://ws2.sinaimg.cn/large/006tNc79ly1fz1ggscgyyj30h80
+      
+    
+    </summary>
+    
+      <category term="A" scheme="http://blog.hnyang.info/categories/A/"/>
+    
+      <category term="B" scheme="http://blog.hnyang.info/categories/A/B/"/>
+    
+    
+      <category term="aa" scheme="http://blog.hnyang.info/tags/aa/"/>
+    
+  </entry>
+  
+  <entry>
+    <title></title>
+    <link href="http://blog.hnyang.info/2019/01/10/2019-01-10/"/>
+    <id>http://blog.hnyang.info/2019/01/10/2019-01-10/</id>
+    <published>2019-01-10T05:17:23.043Z</published>
+    <updated>2019-01-10T05:17:29.088Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="asdsad"><a href="#asdsad" class="headerlink" title="asdsad"></a>asdsad</h1><p>asdasd</p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h1 id=&quot;asdsad&quot;&gt;&lt;a href=&quot;#asdsad&quot; class=&quot;headerlink&quot; title=&quot;asdsad&quot;&gt;&lt;/a&gt;asdsad&lt;/h1&gt;&lt;p&gt;asdasd&lt;/p&gt;
+
+      
+    
+    </summary>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>Pandas 数据清洗</title>
+    <link href="http://blog.hnyang.info/2019/01/09/Hello-World-0/"/>
+    <id>http://blog.hnyang.info/2019/01/09/Hello-World-0/</id>
+    <published>2019-01-09T11:42:36.000Z</published>
+    <updated>2019-01-09T13:26:50.962Z</updated>
+    
+    <content type="html"><![CDATA[<h3 id="Pandas-数据清洗"><a href="#Pandas-数据清洗" class="headerlink" title="Pandas 数据清洗"></a>Pandas 数据清洗</h3><p>用<code>isnull</code>检查某一列是否为缺失数据<br>例如：<br><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">df.post_id[df.post_id.isnull()]</span><br></pre></td></tr></table></figure></p><p><img src="https://ws1.sinaimg.cn/large/006tNbRwly1fyhtphwtwsj308x06tmx1.jpg" alt=""></p><ul><li>若指定若在整个表中出现缺失，则删除这一行</li></ul><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">df.dropna()</span><br></pre></td></tr></table></figure><p><em>若不赋值，则不改变原来的<code>df</code></em></p><ul><li>若只考虑<code>post_id</code>这一列上，只要出现缺失数据则删除改行：</li></ul><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">df = df.dropna(subset=[<span class="string">'post_id'</span>])</span><br></pre></td></tr></table></figure>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h3 id=&quot;Pandas-数据清洗&quot;&gt;&lt;a href=&quot;#Pandas-数据清洗&quot; class=&quot;headerlink&quot; title=&quot;Pandas 数据清洗&quot;&gt;&lt;/a&gt;Pandas 数据清洗&lt;/h3&gt;&lt;p&gt;用&lt;code&gt;isnull&lt;/code&gt;检查某一列是否为缺失数据&lt;b
+      
+    
+    </summary>
+    
+    
+      <category term="Pandas" scheme="http://blog.hnyang.info/tags/Pandas/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Hello World</title>
+    <link href="http://blog.hnyang.info/2019/01/09/hello-world/"/>
+    <id>http://blog.hnyang.info/2019/01/09/hello-world/</id>
+    <published>2019-01-09T11:20:50.132Z</published>
+    <updated>2019-01-09T11:20:50.132Z</updated>
+    
+    <content type="html"><![CDATA[<p>Welcome to <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="noopener">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="noopener">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="noopener">GitHub</a>.</p><h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">"My New Post"</span></span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="noopener">Writing</a></p><h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="noopener">Server</a></p><h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="noopener">Generating</a></p><h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/deployment.html" target="_blank" rel="noopener">Deployment</a></p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;Welcome to &lt;a href=&quot;https://hexo.io/&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;Hexo&lt;/a&gt;! This is your very first post. Check &lt;a href=&quot;https://hexo.
+      
+    
+    </summary>
+    
+    
+  </entry>
+  
+</feed>
