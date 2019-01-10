@@ -96,23 +96,27 @@
 
 
 
-  <meta name="description" content="数据科学 | 复杂网络 | 机器学习  Python 爬虫 | Linux">
-<meta property="og:type" content="website">
+  <meta name="description" content="Docker常用命令总结1、Docker简介下面的图片比较了 Docker 和传统虚拟化方式的不同之处。传统虚拟机技术是虚拟出一套硬件后，在其上运行一个完整操作系统，在该系统上再运行所需应用进程；而容器内的应用进程直接运行于宿主的内核，容器内没有自己的内核，而且也没有进行硬件虚拟。因此容器要比传统虚拟机更为轻便。  2、获取镜像从 Docker 镜像仓库获取镜像的命令是 docker pull。其">
+<meta property="og:type" content="article">
 <meta property="og:title" content="HNYANG&#39;S NOTES">
-<meta property="og:url" content="http://blog.hnyang.info/categories/A/B/index.html">
+<meta property="og:url" content="http://blog.hnyang.info/2018/12/16/5. Docker常用命令总结/index.html">
 <meta property="og:site_name" content="HNYANG&#39;S NOTES">
-<meta property="og:description" content="数据科学 | 复杂网络 | 机器学习  Python 爬虫 | Linux">
+<meta property="og:description" content="Docker常用命令总结1、Docker简介下面的图片比较了 Docker 和传统虚拟化方式的不同之处。传统虚拟机技术是虚拟出一套硬件后，在其上运行一个完整操作系统，在该系统上再运行所需应用进程；而容器内的应用进程直接运行于宿主的内核，容器内没有自己的内核，而且也没有进行硬件虚拟。因此容器要比传统虚拟机更为轻便。  2、获取镜像从 Docker 镜像仓库获取镜像的命令是 docker pull。其">
 <meta property="og:locale" content="zh-CN">
+<meta property="og:image" content="https://ws3.sinaimg.cn/large/006tNbRwly1fy8w25e23fj30j8079my5.jpg">
+<meta property="og:image" content="https://ws1.sinaimg.cn/large/006tNbRwly1fy8w3pug5oj30j505f75a.jpg">
+<meta property="og:updated_time" content="2019-01-10T14:41:27.726Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="HNYANG&#39;S NOTES">
-<meta name="twitter:description" content="数据科学 | 复杂网络 | 机器学习  Python 爬虫 | Linux">
+<meta name="twitter:description" content="Docker常用命令总结1、Docker简介下面的图片比较了 Docker 和传统虚拟化方式的不同之处。传统虚拟机技术是虚拟出一套硬件后，在其上运行一个完整操作系统，在该系统上再运行所需应用进程；而容器内的应用进程直接运行于宿主的内核，容器内没有自己的内核，而且也没有进行硬件虚拟。因此容器要比传统虚拟机更为轻便。  2、获取镜像从 Docker 镜像仓库获取镜像的命令是 docker pull。其">
+<meta name="twitter:image" content="https://ws3.sinaimg.cn/large/006tNbRwly1fy8w25e23fj30j8079my5.jpg">
 
 
 
 
 
 
-  <link rel="canonical" href="http://blog.hnyang.info/categories/A/B/">
+  <link rel="canonical" href="http://blog.hnyang.info/2018/12/16/5. Docker常用命令总结/">
 
 
 
@@ -122,7 +126,7 @@
   };
 </script>
 
-  <title>分类: B | HNYANG'S NOTES</title>
+  <title> | HNYANG'S NOTES</title>
   
 
 
@@ -170,7 +174,7 @@
     
   
 
-  <div class="container sidebar-position-left ">
+  <div class="container sidebar-position-left page-post-detail">
     <div class="headband"></div>
 
     <header id="header" class="header" itemscope="" itemtype="http://schema.org/WPHeader">
@@ -246,7 +250,7 @@
         
         
           
-          <li class="menu-item menu-item-categories menu-item-active">
+          <li class="menu-item menu-item-categories">
 
     
     
@@ -334,80 +338,247 @@
           
             
 
-    
-    
-      
-      
-    
-      
-      
-    
-      
-      
-    
-      
-      
-    
-    
-
-  
-
-
           
           <div id="content" class="content">
             
 
-  
-  
-  
-  <div class="post-block category">
+  <div id="posts" class="posts-expand">
+    
 
-    <div id="posts" class="posts-collapse">
-      <div class="collection-title">
-        <h2>B<small>分类</small>
-        </h2>
-      </div>
+  
 
-      
-        
+  
+  
+  
+
+  
 
   <article class="post post-type-normal" itemscope="" itemtype="http://schema.org/Article">
-    <header class="post-header">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://blog.hnyang.info/2018/12/16/5. Docker常用命令总结/">
 
-      <h3 class="post-title">
+    <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Haonan Yang">
+      <meta itemprop="description" content="数据科学 | 复杂网络 | 机器学习 <br> Python 爬虫 | Linux">
+      <meta itemprop="image" content="/images/header.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope="" itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="HNYANG'S NOTES">
+    </span>
+
+    
+      <header class="post-header">
+
         
-          <a class="post-title-link" href="/2019/01/10/zzzzz/" itemprop="url">
-            
-              <span itemprop="name">zzzzz</span>
-            
-          </a>
         
-      </h3>
+          <h2 class="post-title" itemprop="name headline">
 
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated" datetime="2019-01-10T13:55:14+08:00" content="2019-01-10">
-          01-10
-        </time>
-      </div>
+              
+            
+          </h2>
+        
 
-    </header>
-  </article>
+        <div class="post-meta">
+          <span class="post-time">
 
+            
+            
+            
+
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+
+              
+                
+              
+
+              <time title="创建时间：2018-12-16 20:43:05" itemprop="dateCreated datePublished" datetime="2018-12-16T20:43:05+08:00">2018-12-16</time>
+            
+
+            
+              
+
+              
+                
+                <span class="post-meta-divider">|</span>
+                
+
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">更新于</span>
+                
+                <time title="修改时间：2019-01-10 22:41:27" itemprop="dateModified" datetime="2019-01-10T22:41:27+08:00">2019-01-10</time>
+              
+            
+          </span>
+
+          
+
+          
+            
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+                <a href="/2018/12/16/5. Docker常用命令总结/#comments" itemprop="discussionUrl">
+                  <span class="post-meta-item-text">评论数：</span> <span class="post-comments-count valine-comment-count" data-xid="/2018/12/16/5. Docker常用命令总结/" itemprop="commentCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+          
+             <span id="/2018/12/16/5. Docker常用命令总结/" class="leancloud_visitors" data-flag-title="">
+               <span class="post-meta-divider">|</span>
+               <span class="post-meta-item-icon">
+                 <i class="fa fa-eye"></i>
+               </span>
+               
+                 <span class="post-meta-item-text">阅读次数：</span>
+               
+                 <span class="leancloud-visitors-count"></span>
+             </span>
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <h1 id="Docker常用命令总结"><a href="#Docker常用命令总结" class="headerlink" title="Docker常用命令总结"></a>Docker常用命令总结</h1><h2 id="1、Docker简介"><a href="#1、Docker简介" class="headerlink" title="1、Docker简介"></a>1、Docker简介</h2><p>下面的图片比较了 Docker 和传统虚拟化方式的不同之处。传统虚拟机技术是虚拟出一套硬件后，在其上运行一个完整操作系统，在该系统上再运行所需应用进程；而容器内的应用进程直接运行于宿主的内核，容器内没有自己的内核，而且也没有进行硬件虚拟。因此容器要比传统虚拟机更为轻便。</p>
+<p><img src="https://ws3.sinaimg.cn/large/006tNbRwly1fy8w25e23fj30j8079my5.jpg" alt=""><br><img src="https://ws1.sinaimg.cn/large/006tNbRwly1fy8w3pug5oj30j505f75a.jpg" alt=""></p>
+<h2 id="2、获取镜像"><a href="#2、获取镜像" class="headerlink" title="2、获取镜像"></a>2、获取镜像</h2><p>从 Docker 镜像仓库获取镜像的命令是 <code>docker pull</code>。其命令格式为：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">docker pull [选项] [Docker Registry 地址[:端口号]/]仓库名[:标签]</span><br></pre></td></tr></table></figure>
+<p>上大校内可以搭建私人镜像仓库，方便的在校内搭建docker环境，镜像仓库<code>mirrors.hoc.ccshu.net</code>位于校内网络， 已经启用<code>HTTPS</code>，校内用户的电脑无需进行配置，连上校园网即可进行访问。</p>
+<p>例如：<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">docker pull hub.hoc.ccshu.net/project/buptbbsspider:latest</span><br></pre></td></tr></table></figure></p>
+<p>对于 Docker Hub，如果不给出用户名，则默认为 <code>library</code>，也就是官方镜像。</p>
+<h2 id="3、查看镜像"><a href="#3、查看镜像" class="headerlink" title="3、查看镜像"></a>3、查看镜像</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">docker images</span><br></pre></td></tr></table></figure>
+<h2 id="4、删除镜像"><a href="#4、删除镜像" class="headerlink" title="4、删除镜像"></a>4、删除镜像</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">docker rmi hello-world</span><br></pre></td></tr></table></figure>
+<h2 id="3、运行docker"><a href="#3、运行docker" class="headerlink" title="3、运行docker"></a>3、运行docker</h2><p>有了镜像后，我们就能够以这个镜像为基础启动并运行一个容器（可以理解为一个Linux系统），例如：<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">docker run -it --rm hnyang/buptbbsspider /bin/bash</span><br></pre></td></tr></table></figure></p>
+<ul>
+<li><code>-it</code>：这是两个参数，一个是 <code>-i</code>：交互式操作，一个是 <code>-t</code> 终端。我们这里打算进入 bash 执行一些命令并查看返回结果，因此我们需要交互式终端。</li>
+<li><code>--rm</code>：这个参数是说容器退出后随之将其删除。默认情况下，为了排障需求，退出的容器并不会立即删除，除非手动 <code>docker rm</code>。我们这里只是随便执行个命令，看看结果，不需要排障和保留结果，因此使用 <code>--rm</code> 可以避免浪费空间。</li>
+<li>也可以添加参数 <code>-d</code>使其后台运行，返回其容器ID（再进入容器用<code>docker attach 容器ID</code>）</li>
+</ul>
+<p><em><strong>注意：</strong></em></p>
+<p>就算使用了 <code>-d</code> 参数 然后用<code>attach</code>命令返回容器，再次用 <code>exit</code> 命令退出时，容器还是会删除，所以<strong>如果想要容器正常退出不关闭容器，请按 <code>Ctrl+P+Q</code> 进行退出容器</strong></p>
 
       
     </div>
 
+    
+
+    
+    
+    
+
+    
+
+    
+      
+    
+    
+
+    
+      <div>
+        
+
+
+
+  
+
+
+
+<ul class="post-copyright">
+  <li class="post-copyright-author">
+    <strong>本文作者： </strong>Haonan Yang</li>
+  <li class="post-copyright-link">
+    <strong>本文链接：</strong>
+    
+    <a href="http://blog.hnyang.info/2018/12/16/5. Docker常用命令总结/">http://blog.hnyang.info/2018/12/16/5. Docker常用命令总结/</a>
+  </li>
+  <li class="post-copyright-license">
+    <strong>版权声明： </strong>本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" rel="noopener" target="_blank"><i class="fa fa-fw fa-creative-commons"></i>BY-NC-SA</a> 许可协议。转载请注明出处！</li>
+</ul>
+
+      </div>
+    
+
+    <footer class="post-footer">
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2018/12/17/Git 常用命令总结/" rel="prev" title="">
+                 <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
   </div>
   
   
   
+  </article>
 
-  
 
+  </div>
 
 
           </div>
           
+
+  
+    <div class="comments" id="comments">
+    </div>
+
+  
+
+
 
         </div>
         
@@ -428,8 +599,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
 
-      <div class="site-overview-wrap sidebar-panel sidebar-panel-active">
+      <div class="site-overview-wrap sidebar-panel">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope="" itemtype="http://schema.org/Person">
             
@@ -446,7 +626,7 @@
                 
                   <a href="/archives/">
                 
-                    <span class="site-state-item-count">4</span>
+                    <span class="site-state-item-count">5</span>
                     <span class="site-state-item-name">日志</span>
                   </a>
                 </div>
@@ -463,7 +643,7 @@
                     
                       
                     
-                    <span class="site-state-item-count">2</span>
+                    <span class="site-state-item-count">0</span>
                     <span class="site-state-item-name">分类</span>
                   </a>
                 </div>
@@ -480,7 +660,7 @@
                     
                       
                     
-                    <span class="site-state-item-count">2</span>
+                    <span class="site-state-item-count">1</span>
                     <span class="site-state-item-name">标签</span>
                   
                 </div>
@@ -531,6 +711,23 @@
         </div>
       </div>
 
+      
+      <!--noindex-->
+        <div class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+            
+            
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#Docker常用命令总结"><span class="nav-number">1.</span> <span class="nav-text">Docker常用命令总结</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#1、Docker简介"><span class="nav-number">1.1.</span> <span class="nav-text">1、Docker简介</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2、获取镜像"><span class="nav-number">1.2.</span> <span class="nav-text">2、获取镜像</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#3、查看镜像"><span class="nav-number">1.3.</span> <span class="nav-text">3、查看镜像</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#4、删除镜像"><span class="nav-number">1.4.</span> <span class="nav-text">4、删除镜像</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#3、运行docker"><span class="nav-number">1.5.</span> <span class="nav-text">3、运行docker</span></a></li></ol></li></ol></div>
+            
+
+          </div>
+        </div>
+      <!--/noindex-->
       
 
       
@@ -684,6 +881,10 @@
 
 
   
+  <script src="/js/src/scrollspy.js?v=6.7.0"></script>
+<script src="/js/src/post-details.js?v=6.7.0"></script>
+
+
 
   
 
@@ -1065,43 +1266,42 @@
   
   <script>
     
-    function showTime(Counter) {
-      var entries = [];
+    function addCount(Counter) {
       var $visitors = $(".leancloud_visitors");
+      var url = $visitors.attr('id').trim();
+      var title = $visitors.attr('data-flag-title').trim();
 
-      $visitors.each(function () {
-        entries.push( $(this).attr("id").trim() );
-      });
-
-      Counter('get', '/classes/Counter', { where: JSON.stringify({ url: { "$in": entries } }) })
+      Counter('get', '/classes/Counter', { where: JSON.stringify({ url }) })
         .done(function ({ results }) {
-          var COUNT_CONTAINER_REF = '.leancloud-visitors-count';
-
-          if (results.length === 0) {
-            $visitors.find(COUNT_CONTAINER_REF).text(0);
-            return;
-          }
-
-          for (var i = 0; i < results.length; i++) {
-            var item = results[i];
-            var url = item.url;
-            var time = item.time;
-            var element = document.getElementById(url);
-
-            $(element).find(COUNT_CONTAINER_REF).text(time);
-          }
-          for(var i = 0; i < entries.length; i++) {
-            var url = entries[i];
-            var element = document.getElementById(url);
-            var countSpan = $(element).find(COUNT_CONTAINER_REF);
-            if( countSpan.text() == '') {
-              countSpan.text(0);
-            }
+          if (results.length > 0) {
+            var counter = results[0];
+            
+            Counter('put', `/classes/Counter/${counter.objectId}`, JSON.stringify({ time: { "__op":"Increment", "amount":1 } }))
+            
+            .done(function () {
+                  var $element = $(document.getElementById(url));
+                  $element.find('.leancloud-visitors-count').text(counter.time + 1);
+            })
+            
+            .fail(function ({ responseJSON }) {
+                console.log('Failed to save Visitor num, with error message: ' + responseJSON.error);
+            })
+          } else {
+            
+              Counter('post', '/classes/Counter', JSON.stringify({ title: title, url: url, time: 1}))
+                .done(function () {
+                  var $element = $(document.getElementById(url));
+                  $element.find('.leancloud-visitors-count').text(1);
+                })
+                .fail(function () {
+                  console.log('Failed to create');
+                });
+            
           }
         })
-        .fail(function ({ responseJSON }) {
-          console.log("LeanCloud Counter Error: " + responseJSON.code + " " + responseJSON.error);
-        });
+      .fail(function ({ responseJSON }) {
+        console.log('LeanCloud Counter Error:' + responseJSON.code + " " + responseJSON.error);
+      });
     }
     
 
@@ -1121,9 +1321,7 @@
             });
           };
           
-          if ($('.post-title-link').length >= 1) {
-            showTime(Counter);
-          }
+          addCount(Counter);
           
         })
     });
