@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<search>
+  <entry>
+    <title><![CDATA[zzzzz]]></title>
+    <url>%2F2019%2F01%2F10%2Fzzzzz%2F</url>
+    <content type="text"><![CDATA[]]></content>
+      <categories>
+        <category>A</category>
+        <category>B</category>
+      </categories>
+      <tags>
+        <tag>aa</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title></title>
+    <url>%2F2019%2F01%2F10%2F2019-01-10%2F</url>
+    <content type="text"><![CDATA[asdsadasdasd]]></content>
+  </entry>
+  <entry>
+    <title><![CDATA[Pandas 数据清洗]]></title>
+    <url>%2F2019%2F01%2F09%2FHello-World-0%2F</url>
+    <content type="text"><![CDATA[Pandas 数据清洗本文主要介绍如何查找缺失数据 用isnull检查某一列是否为缺失数据例如：1df.post_id[df.post_id.isnull()] 若指定若在整个表中出现缺失，则删除这一行 1df.dropna() 若不赋值，则不改变原来的df 若只考虑post_id这一列上，只要出现缺失数据则删除改行： 1df = df.dropna(subset=['post_id'])]]></content>
+      <tags>
+        <tag>Pandas</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[Hello World]]></title>
+    <url>%2F2019%2F01%2F09%2Fhello-world%2F</url>
+    <content type="text"><![CDATA[Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub. Quick StartCreate a new post1$ hexo new "My New Post" More info: Writing Run server1$ hexo server More info: Server Generate static files1$ hexo generate More info: Generating Deploy to remote sites1$ hexo deploy More info: Deployment]]></content>
+  </entry>
+</search>

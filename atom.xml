@@ -71,16 +71,13 @@
     <link href="http://blog.hnyang.info/2019/01/09/Hello-World-0/"/>
     <id>http://blog.hnyang.info/2019/01/09/Hello-World-0/</id>
     <published>2019-01-09T11:42:36.000Z</published>
-    <updated>2019-01-09T13:26:50.962Z</updated>
+    <updated>2019-01-10T07:52:39.448Z</updated>
     
-    <content type="html"><![CDATA[<h3 id="Pandas-数据清洗"><a href="#Pandas-数据清洗" class="headerlink" title="Pandas 数据清洗"></a>Pandas 数据清洗</h3><p>用<code>isnull</code>检查某一列是否为缺失数据<br>例如：<br><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">df.post_id[df.post_id.isnull()]</span><br></pre></td></tr></table></figure></p><p><img src="https://ws1.sinaimg.cn/large/006tNbRwly1fyhtphwtwsj308x06tmx1.jpg" alt=""></p><ul><li>若指定若在整个表中出现缺失，则删除这一行</li></ul><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">df.dropna()</span><br></pre></td></tr></table></figure><p><em>若不赋值，则不改变原来的<code>df</code></em></p><ul><li>若只考虑<code>post_id</code>这一列上，只要出现缺失数据则删除改行：</li></ul><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">df = df.dropna(subset=[<span class="string">'post_id'</span>])</span><br></pre></td></tr></table></figure>]]></content>
+    <content type="html"><![CDATA[<h3 id="Pandas-数据清洗"><a href="#Pandas-数据清洗" class="headerlink" title="Pandas 数据清洗"></a>Pandas 数据清洗</h3><p>本文主要介绍如何查找缺失数据<br><a id="more"></a></p><p>用<code>isnull</code>检查某一列是否为缺失数据<br>例如：<br><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">df.post_id[df.post_id.isnull()]</span><br></pre></td></tr></table></figure></p><p><img src="https://ws1.sinaimg.cn/large/006tNbRwly1fyhtphwtwsj308x06tmx1.jpg" alt=""></p><ul><li>若指定若在整个表中出现缺失，则删除这一行</li></ul><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">df.dropna()</span><br></pre></td></tr></table></figure><p><em>若不赋值，则不改变原来的<code>df</code></em></p><ul><li>若只考虑<code>post_id</code>这一列上，只要出现缺失数据则删除改行：</li></ul><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">df = df.dropna(subset=[<span class="string">'post_id'</span>])</span><br></pre></td></tr></table></figure>]]></content>
     
     <summary type="html">
     
-      
-      
-        &lt;h3 id=&quot;Pandas-数据清洗&quot;&gt;&lt;a href=&quot;#Pandas-数据清洗&quot; class=&quot;headerlink&quot; title=&quot;Pandas 数据清洗&quot;&gt;&lt;/a&gt;Pandas 数据清洗&lt;/h3&gt;&lt;p&gt;用&lt;code&gt;isnull&lt;/code&gt;检查某一列是否为缺失数据&lt;b
-      
+      &lt;h3 id=&quot;Pandas-数据清洗&quot;&gt;&lt;a href=&quot;#Pandas-数据清洗&quot; class=&quot;headerlink&quot; title=&quot;Pandas 数据清洗&quot;&gt;&lt;/a&gt;Pandas 数据清洗&lt;/h3&gt;&lt;p&gt;本文主要介绍如何查找缺失数据&lt;br&gt;
     
     </summary>
     
