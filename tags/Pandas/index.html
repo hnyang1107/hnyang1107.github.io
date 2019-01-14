@@ -74,7 +74,7 @@
     root: '/',
     scheme: 'Gemini',
     version: '6.7.0',
-    sidebar: {"position":"left","display":"post","offset":12,"b2t":false,"scrollpercent":false,"onmobile":false},
+    sidebar: {"position":"left","display":"post","offset":12,"b2t":false,"scrollpercent":true,"onmobile":false},
     fancybox: false,
     fastclick: false,
     lazyload: false,
@@ -433,9 +433,9 @@
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope="" itemtype="http://schema.org/Person">
             
-              <img class="site-author-image" itemprop="image" src="/images/header.jpg" alt="Haonan Yang">
+              <img class="site-author-image" itemprop="image" src="/images/header.jpg" alt="HNYANG">
             
-              <p class="site-author-name" itemprop="name">Haonan Yang</p>
+              <p class="site-author-name" itemprop="name">HNYANG</p>
               <p class="site-description motion-element" itemprop="description">数据科学 | 复杂网络 | 机器学习 <br> Python 爬虫 | Linux</p>
           </div>
 
@@ -532,7 +532,7 @@
   <span class="with-love" id="animate">
     <i class="fa fa-user"></i>
   </span>
-  <span class="author" itemprop="copyrightHolder">Haonan Yang</span>
+  <span class="author" itemprop="copyrightHolder">HNYANG</span>
 
   
 
@@ -587,6 +587,8 @@
     
       <div class="back-to-top">
         <i class="fa fa-arrow-up"></i>
+        
+          <span id="scrollpercent"><span>0</span>%</span>
         
       </div>
     
@@ -702,14 +704,14 @@
     });
     new Valine({
       el: '#comments' ,
-      verify: false,
-      notify: false,
+      verify: true,
+      notify: true,
       appId: 'BLkE0wdwFsV3AsqLlBxjGn9t-gzGzoHsz',
       appKey: '3DRdGHieM8RANLx4raFf1J03',
       placeholder: '( •̀ .̫ •́ )✧ 别走嘛！说点什么吧！',
       avatar: 'mm',
       meta:guest,
-      pageSize: '6' || 10,
+      pageSize: '3' || 10,
       visitor: false
     });
   </script>
