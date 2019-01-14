@@ -1889,7 +1889,7 @@ pre .javascript .function {
   width: 4px;
   height: 4px;
   border-radius: 50%;
-  background: #127406;
+  background: #fff12f;
 }
 .links-of-blogroll {
   font-size: 13px;
@@ -3192,4 +3192,12 @@ ul.breadcrumb li+li:last-child {
   .pagination {
     margin: 8px 0 0;
   }
+}
+@font-face {
+  font-family: Gloss_And_Bloom;
+  src: url("/fonts/Gloss_And_Bloom.ttf");
+}
+.site-title {
+  font-size: 30px !important;
+  font-family: 'Gloss_And_Bloom' !important;
 }
