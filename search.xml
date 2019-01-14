@@ -11,7 +11,7 @@
   <entry>
     <title><![CDATA[Hello World]]></title>
     <url>%2F2019%2F01%2F09%2Fhello-world%2F</url>
-    <content type="text"><![CDATA[Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub.Quick StartCreate a new post1$ hexo new "My New Post"More info: WritingRun server1$ hexo serverMore info: ServerGenerate static files1$ hexo generateMore info: GeneratingDeploy to remote sites1$ hexo deployMore info: Deployment注意$$\int^{1}_{-1}\lim\frac{x_i+y_i}{x+y}+\sin^{2}{x}=1$$Content (md partial supported)$$\int^{1}_{-1}\lim\frac{x_i+y_i}{x+y}+\sin^{2}{x}=1$$Content (md partial supported)]]></content>
+    <content type="text"><![CDATA[Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub.Quick StartCreate a new post1$ hexo new "My New Post"More info: WritingRun server1$ hexo serverMore info: ServerGenerate static files1$ hexo generateMore info: GeneratingDeploy to remote sites1$ hexo deployMore info: Deployment注意$$\int^{1}_{-1}\lim\frac{x_i+y_i}{x+y}+\sin^{2}{x}=1$$注意Content (md partial supported)$$\int^{1}_{-1}\lim\frac{x_i+y_i}{x+y}+\sin^{2}{x}=1$$Content (md partial supported)]]></content>
   </entry>
   <entry>
     <title><![CDATA[Git 常用命令总结]]></title>
