@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://hnyang.me/"/>
-  <updated>2019-01-14T06:02:12.546Z</updated>
+  <updated>2019-01-14T06:03:06.917Z</updated>
   <id>https://hnyang.me/</id>
   
   <author>
@@ -21,7 +21,7 @@
     <link href="https://hnyang.me/2019/01/09/Hello-World-0/"/>
     <id>https://hnyang.me/2019/01/09/Hello-World-0/</id>
     <published>2019-01-09T11:42:36.000Z</published>
-    <updated>2019-01-14T06:02:12.546Z</updated>
+    <updated>2019-01-14T06:03:06.917Z</updated>
     
     <content type="html"><![CDATA[<h3 id="Pandas-数据清洗"><a href="#Pandas-数据清洗" class="headerlink" title="Pandas 数据清洗"></a>Pandas 数据清洗</h3><p>本文主要介绍如何查找缺失数据<br><a id="more"></a></p><p>用<code>isnull</code>检查某一列是否为缺失数据<br>例如：<br><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">df.post_id[df.post_id.isnull()]</span><br></pre></td></tr></table></figure></p><p><img src="https://ws1.sinaimg.cn/large/006tNbRwly1fyhtphwtwsj308x06tmx1.jpg" alt=""></p><ul><li>若指定若在整个表中出现缺失，则删除这一行</li></ul><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">df.dropna()</span><br></pre></td></tr></table></figure><p><em>若不赋值，则不改变原来的<code>df</code></em></p><ul><li>若只考虑<code>post_id</code>这一列上，只要出现缺失数据则删除改行：</li></ul><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">df = df.dropna(subset=[<span class="string">'post_id'</span>])</span><br></pre></td></tr></table></figure>]]></content>
     
@@ -41,7 +41,7 @@
     <link href="https://hnyang.me/2019/01/09/hello-world/"/>
     <id>https://hnyang.me/2019/01/09/hello-world/</id>
     <published>2019-01-09T11:20:50.132Z</published>
-    <updated>2019-01-09T11:20:50.132Z</updated>
+    <updated>2019-01-14T06:03:30.219Z</updated>
     
     <content type="html"><![CDATA[<p>Welcome to <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="noopener">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="noopener">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="noopener">GitHub</a>.</p><h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">"My New Post"</span></span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="noopener">Writing</a></p><h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="noopener">Server</a></p><h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="noopener">Generating</a></p><h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/deployment.html" target="_blank" rel="noopener">Deployment</a></p>]]></content>
     
