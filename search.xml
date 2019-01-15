@@ -1,6 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[aaa]]></title>
+    <url>%2F2019%2F01%2F15%2Faaa%2F</url>
+    <content type="text"><![CDATA[aaaaaaaa##aaa##aaa##aaa本文更新于]]></content>
+  </entry>
+  <entry>
     <title><![CDATA[New]]></title>
     <url>%2F2019%2F01%2F15%2FNew%2F</url>
     <content type="text"><![CDATA[这是基本的介绍标题1 已完成 未完成标题2人生乃是一面镜子，从镜子里认识自己，我要称之为头等大事，也只是我们追求的目的！标题3本文更新于 2019-01-15]]></content>
