@@ -1,6 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[New]]></title>
+    <url>%2F2019%2F01%2F15%2FNew%2F</url>
+    <content type="text"><![CDATA[这是基本的介绍标题1 已完成 未完成标题2人生乃是一面镜子，从镜子里认识自己，我要称之为头等大事，也只是我们追求的目的！标题3]]></content>
+      <tags>
+        <tag>Linux</tag>
+        <tag>机器学习</tag>
+      </tags>
+  </entry>
+  <entry>
     <title><![CDATA[Pandas 数据清洗]]></title>
     <url>%2F2019%2F01%2F09%2FHello-World-0%2F</url>
     <content type="text"><![CDATA[Pandas 数据清洗本文主要介绍如何查找缺失数据用isnull检查某一列是否为缺失数据例如：1df.post_id[df.post_id.isnull()]若指定若在整个表中出现缺失，则删除这一行1df.dropna()若不赋值，则不改变原来的df若只考虑post_id这一列上，只要出现缺失数据则删除改行：1df = df.dropna(subset=['post_id'])]]></content>
