@@ -513,7 +513,19 @@
       
 
       
-        <h3 id="Pandas-数据清洗"><a href="#Pandas-数据清洗" class="headerlink" title="Pandas 数据清洗"></a>Pandas 数据清洗</h3><p>本文主要介绍如何查找缺失数据<br><a id="more"></a></p><p>用<code>isnull</code>检查某一列是否为缺失数据<br>例如：<br></p><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">df.post_id[df.post_id.isnull()]</span><br></pre></td></tr></table></figure><p></p><p><img src="https://ws1.sinaimg.cn/large/006tNbRwly1fyhtphwtwsj308x06tmx1.jpg" alt=""></p><ul><li>若指定若在整个表中出现缺失，则删除这一行</li></ul><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">df.dropna()</span><br></pre></td></tr></table></figure><p><em>若不赋值，则不改变原来的<code>df</code></em></p><ul><li>若只考虑<code>post_id</code>这一列上，只要出现缺失数据则删除改行：</li></ul><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">df = df.dropna(subset=[<span class="string">'post_id'</span>])</span><br></pre></td></tr></table></figure>
+        <h3 id="Pandas-数据清洗"><a href="#Pandas-数据清洗" class="headerlink" title="Pandas 数据清洗"></a>Pandas 数据清洗</h3><p>本文主要介绍如何查找缺失数据<br><a id="more"></a></p>
+<p>用<code>isnull</code>检查某一列是否为缺失数据<br>例如：<br><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">df.post_id[df.post_id.isnull()]</span><br></pre></td></tr></table></figure></p>
+<p><img src="https://ws1.sinaimg.cn/large/006tNbRwly1fyhtphwtwsj308x06tmx1.jpg" alt=""></p>
+<ul>
+<li>若指定若在整个表中出现缺失，则删除这一行</li>
+</ul>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">df.dropna()</span><br></pre></td></tr></table></figure>
+<p><em>若不赋值，则不改变原来的<code>df</code></em></p>
+<ul>
+<li>若只考虑<code>post_id</code>这一列上，只要出现缺失数据则删除改行：</li>
+</ul>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">df = df.dropna(subset=[<span class="string">'post_id'</span>])</span><br></pre></td></tr></table></figure>
+
       
     </div>
 
