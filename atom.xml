@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://hnyang.me/"/>
-  <updated>2019-03-20T12:37:53.070Z</updated>
+  <updated>2019-03-21T03:36:49.519Z</updated>
   <id>https://hnyang.me/</id>
   
   <author>
@@ -17,11 +17,29 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
-    <title>CS229 笔记1：回归算法</title>
+    <title>CS229笔记【0】：机器学习中的数学</title>
+    <link href="https://hnyang.me/2019/03/21/CS229%E7%AC%94%E8%AE%B00%EF%BC%9A%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0%E4%B8%AD%E7%9A%84%E6%95%B0%E5%AD%A6/"/>
+    <id>https://hnyang.me/2019/03/21/CS229笔记0：机器学习中的数学/</id>
+    <published>2019-03-20T18:35:40.615Z</published>
+    <updated>2019-03-21T03:36:49.519Z</updated>
+    
+    <content type="html"><![CDATA[<p class="description"></p><a id="more"></a><h2 id="线性代数与矩阵分析"><a href="#线性代数与矩阵分析" class="headerlink" title="线性代数与矩阵分析"></a>线性代数与矩阵分析</h2><div class="note primary"><p>了解一定的数学理论会对机器学习有很好的理解，本章主要参考 <a href="https://hnyang.oss-cn-shanghai.aliyuncs.com/Linear%20Algebra%20Review%20and%20Reference.pdf" target="_blank"><i class="fa fa-download"></i><span>课程补充材料</span> </a>，基本的大学线性代数知识在这里不做详细讨论，这篇笔记算是对材料做一个补充和翻译.</p></div><h3 id="可逆矩阵与奇异矩阵"><a href="#可逆矩阵与奇异矩阵" class="headerlink" title="可逆矩阵与奇异矩阵"></a>可逆矩阵与奇异矩阵</h3><blockquote><p><strong>逆矩阵</strong>（inverse matrix）: 给定一个 $n$ 阶方阵 $\mathbf {A}$，若存在一 $n$ 阶方阵 $\mathbf {B}$ ，使得 $\mathbf{AB}=\mathbf{BA}=\mathbf{I}_n$，则称 $\mathbf{A}$ 是可逆的，且 $\mathbf {B}$ 是 $\mathbf{A}$ 的逆矩阵，记作 $\mathbf {A} ^{-1}$。</p></blockquote><p>而可逆矩阵叫做 <strong>非奇异矩阵（non-singular）</strong>，在数学中，“奇异”（singular）一词用来形容破坏了某种优良性质的数学对象。对于矩阵来说，“可逆”是一个好的性质，不可逆的矩阵就称为“奇异”矩阵，可以这样按两方面简单理解，我们知道，如果一个 $n$ 阶方阵的列向量线性无关，那么这个矩阵可逆，说明列向量线性相关，即某个列向量可以被其余列向量线性表示，而线性相关可以理解为按列向量排列的线性空间中的点具有某种”共低维（小于 $n$ 维度）空间的性质“（一个 $2\times 2$ 的矩阵不可逆表示列向量共线，一个 $3\times 3$ 方阵不可逆表示列向量共面），这样对于一个 $n$ 维空间的向量来说其实是非常 <strong>“奇异”</strong> 的，所以，不可逆矩阵叫做一个奇异矩阵。<br>我们也知道，若 $A$ 不可逆，则 $|A|=0$，材料中用“体积”方法直观的解释了行列式的几何意义：</p><p><img src="https://hnyang.oss-cn-shanghai.aliyuncs.com/2019-03-21-032945.jpg" width="40%" height="50%"></p>]]></content>
+    
+    <summary type="html">
+    
+      A broad introduction to machine learning and statistical pattern recognition
+    
+    </summary>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>CS229 笔记【1】：回归算法</title>
     <link href="https://hnyang.me/2019/03/18/CS229:%201%E3%80%81%E7%BA%BF%E6%80%A7%E5%9B%9E%E5%BD%92/"/>
     <id>https://hnyang.me/2019/03/18/CS229: 1、线性回归/</id>
     <published>2019-03-18T06:06:46.128Z</published>
-    <updated>2019-03-20T12:37:53.070Z</updated>
+    <updated>2019-03-21T02:51:54.923Z</updated>
     
     <content type="html"><![CDATA[<p class="description">“A broad introduction to machine learning and statistical pattern recognition”</p><a id="more"></a><h2 id="一些记号说明"><a href="#一些记号说明" class="headerlink" title="一些记号说明"></a>一些记号说明</h2><div class="note primary"><ul><li>$m$ = # training exmples.(训练样本个数，表的行数)</li><li>$\mathcal{X}$ = “input” variables/ fratures.(整张表)</li><li>$\mathcal{Y}$ = “output” variables/ “target” variables（某一列）</li><li>$(x,y)$ = “training example”</li><li>$(x^{(i)},y^{(i)})$ = 第 $i$ 个训练样本. (表的某一行)</li></ul></div><p><img src="https://hnyang.oss-cn-shanghai.aliyuncs.com/2019-03-18-144704.jpg" width="40%" height="50%"><br>在学习的过程中，学习算法试图通过训练数据集中的样本产生一个可以预测 $y$ 的预测系统，这个过程就叫做机器学习。</p><h2 id="线性回归"><a href="#线性回归" class="headerlink" title="线性回归"></a>线性回归</h2><p>对于线性回归，我们假设参数和输入的特征服从线性函数，也就是说<br>$$<br>h(x)=\sum_{i=0}^{n} \theta_{i} x_{i}=\theta^{T} x<br>$$<br>这里假定 $x_0=1$，定义其损失函数为偏离输出变量的平方和，也就是<br>$$<br>J(\theta)=\frac{1}{2} \sum_{i=1}^{m}\left(h_{\theta}\left(x^{(i)}\right)-y^{(i)}\right)^{2}<br>$$</p><p>##</p>]]></content>
     
