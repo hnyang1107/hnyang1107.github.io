@@ -1,15 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
-    <title><![CDATA[交互式可视化利器：HoloViews]]></title>
-    <url>%2Fposts%2F43158%2F</url>
-    <content type="text"><![CDATA[“Making data analysis and visualization seamless and simple”在了解 HoloViews 之前，我们先看一张图：这张图是 PyCon 2017 的相关演讲，主题是 “The Python Visualization Landscape“，其中介绍了一些 Python 可视化库的基本架构与分布.python可视化库可以大致分为几类：基于 matplotlib 的可视化库基于 JS 的可视化库基于上述两者或其他组合功能的库matplotlib 是 python可视化库的基础。matplotlib 库的设计参考了 matlab，但其有两个主要缺点：学习成本比较高对网页以及交互式绘图的支持较弱而基于 JS 的可视化库可以解决这些问题，基于 JavaScript 的可视化程序只需要一个浏览器即可实现，复杂的交互也轻而易举，比较常用的是 Bokeh 和 Plotly，Bokeh (Bokeh.js) 是一个 Python 交互式可视化库，支持现代化 Web 浏览器，提供非常完美的展示功能。Bokeh 的目标是使用 D3.js样式提供优雅，简洁新颖的图形化风格，同时提供大型数据集的高性能交互功能。Boken 可以快速的创建交互式的绘图，仪表盘和数据应用。而 最顶端的的 HoloViews 结合了这些库，其哲学思想是 "用最简单的方式让数据本身去表达自己"，而且它包含丰富的可组合元素库，可以覆盖、嵌套和轻松定位。同时，它还支持快速数据探索。HoloViews 可以和 Seaborn、Pandas 或者 Bokeh 组合使用。######]]></content>
-      <tags>
-        <tag>Python</tag>
-        <tag>HoloViews</tag>
-      </tags>
-  </entry>
-  <entry>
     <title><![CDATA[MATLAB 笔记]]></title>
     <url>%2Fposts%2F52233%2F</url>
     <content type="text"><![CDATA[与其他编程语言不同，MATLAB 是从 1 开始索引的，通过括号进行索引: A(1)一般来说有个 dim 参数，类似于 numpy 中 axis 参数，1 表示计算每列，2 表示计算每行，如 mean(A,1): 计算每一列的均值，返回一个行向量矩阵基本操作将矩阵 A 列向量化：A(:)将矩阵 A B 横着合并：[A B]将矩阵 A B 竖着合并：[A; B]所有列求和：sum(A,2)画图操作标记 x 轴：xlabel(&#39;time&#39;)标记 y 轴：ylabel(&#39;time&#39;)给 x 轴 y 轴修改坐标轴范围：axis([0.5 1 -1 1])（x 0.5 到 1，y -1 到 1）标记曲线：legend(&#39;sin&#39;, &#39;cos&#39;)保存文件：print -dpng &#39;myplot.png&#39;画多图在同一figure中：subplot(1,2,1)（生成 1*2 的布局，首先画第一张图）对矩阵画图观察矩阵分布大小：imagesc(A)（通常配合 colorbar colormap gray 生成带灰度 bar 的矩阵数值大小分布图）在当前画图状态下继续画图：hold on在新的画图状态下画图：hold off##]]></content>
