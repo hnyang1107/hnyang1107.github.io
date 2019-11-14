@@ -9,6 +9,11 @@
   <updated>2019-11-14T07:40:54.952Z</updated>
   <id>https://blog.yanghn.com/</id>
   
+  <author>
+    <name>yanghn</name>
+    
+  </author>
+  
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
@@ -38,7 +43,7 @@
     <link href="https://blog.yanghn.com/posts/52233/"/>
     <id>https://blog.yanghn.com/posts/52233/</id>
     <published>2019-04-07T14:37:00.000Z</published>
-    <updated>2019-04-08T08:41:31.000Z</updated>
+    <updated>2019-11-14T13:11:11.292Z</updated>
     
     <content type="html"><![CDATA[<p class="description"></p><p><img src="" alt="" style="width:85%"></p><a id="more"></a><div class="note warning"><ul><li>与其他编程语言不同，MATLAB 是从 1 开始索引的，通过括号进行索引: <code>A(1)</code></li><li>一般来说有个 <code>dim</code> 参数，类似于 numpy 中 <code>axis</code> 参数，<code>1</code> 表示计算每列，<code>2</code> 表示计算每行，如 <code>mean(A,1)</code>: 计算每一列的均值，返回一个行向量</li></ul></div><h2 id="矩阵基本操作"><a href="#矩阵基本操作" class="headerlink" title="矩阵基本操作"></a>矩阵基本操作</h2><ul><li><strong>将矩阵 A 列向量化</strong>：<code>A(:)</code></li><li><strong>将矩阵 A B 横着合并</strong>：<code>[A B]</code></li><li><strong>将矩阵 A B 竖着合并</strong>：<code>[A; B]</code></li><li><strong>所有列求和</strong>：<code>sum(A,2)</code></li></ul><h2 id="画图操作"><a href="#画图操作" class="headerlink" title="画图操作"></a>画图操作</h2><ul><li><strong>标记 x 轴</strong>：<code>xlabel(&#39;time&#39;)</code></li><li><strong>标记 y 轴</strong>：<code>ylabel(&#39;time&#39;)</code></li><li><strong>给 x 轴 y 轴修改坐标轴范围</strong>：<code>axis([0.5 1 -1 1])</code>（x 0.5 到 1，y -1 到 1）</li><li><strong>标记曲线</strong>：<code>legend(&#39;sin&#39;, &#39;cos&#39;)</code></li><li><strong>保存文件</strong>：<code>print -dpng &#39;myplot.png&#39;</code></li><li><strong>画多图在同一figure中</strong>：<code>subplot(1,2,1)</code>（生成 1*2 的布局，首先画第一张图）</li><li><strong>对矩阵画图观察矩阵分布大小</strong>：<code>imagesc(A)</code>（通常配合 colorbar colormap gray 生成带灰度 bar 的矩阵数值大小分布图）</li><li><strong>在当前画图状态下继续画图</strong>：<code>hold on</code></li><li><strong>在新的画图状态下画图</strong>：<code>hold off</code><br>##</li></ul>]]></content>
     
