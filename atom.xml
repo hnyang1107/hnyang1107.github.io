@@ -1,16 +1,16 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
-  <title>HN YANG</title>
+  <title>yanghn&#39;s blog</title>
   
   <subtitle>「求知若饥，虚心若愚」</subtitle>
   <link href="/atom.xml" rel="self"/>
   
-  <link href="https://hnyang.me/"/>
-  <updated>2019-05-14T06:30:57.000Z</updated>
-  <id>https://hnyang.me/</id>
+  <link href="https://blog.yanghn.com/"/>
+  <updated>2019-11-14T07:40:54.952Z</updated>
+  <id>https://blog.yanghn.com/</id>
   
   <author>
-    <name>Haonan</name>
+    <name>yanghn</name>
     
   </author>
   
@@ -18,10 +18,10 @@
   
   <entry>
     <title>交互式可视化利器：HoloViews</title>
-    <link href="https://hnyang.me/posts/43158/"/>
-    <id>https://hnyang.me/posts/43158/</id>
+    <link href="https://blog.yanghn.com/posts/43158/"/>
+    <id>https://blog.yanghn.com/posts/43158/</id>
     <published>2019-05-14T05:20:38.000Z</published>
-    <updated>2019-05-14T06:30:57.000Z</updated>
+    <updated>2019-11-14T07:40:54.952Z</updated>
     
     <content type="html"><![CDATA[<p class="description">“Making data analysis and visualization seamless and simple”</p><p><img src="" alt="" style="width:85%"></p><a id="more"></a><p>在了解 HoloViews 之前，我们先看一张图：</p><p><img src="https://hnyang.oss-cn-shanghai.aliyuncs.com/2019-05-14-053159.png" alt="" style="width:90%"></p><p>这张图是 PyCon 2017 的相关演讲，主题是 “<a href="https://www.youtube.com/watch?v=FytuB8nFHPQ" target="_blank" rel="noopener">The Python Visualization Landscape</a>“，其中介绍了一些 Python 可视化库的基本架构与分布.</p><p>python可视化库可以大致分为几类：</p><ul><li>基于 matplotlib 的可视化库</li><li>基于 JS 的可视化库</li><li>基于上述两者或其他组合功能的库</li></ul><p>matplotlib 是 python可视化库的基础。matplotlib 库的设计参考了 matlab，但其有两个主要缺点：</p><ul><li>学习成本比较高</li><li>对网页以及交互式绘图的支持较弱</li></ul><p>而基于 JS 的可视化库可以解决这些问题，基于 JavaScript 的可视化程序只需要一个浏览器即可实现，复杂的交互也轻而易举，比较常用的是 Bokeh 和 Plotly，Bokeh (Bokeh.js) 是一个 Python 交互式可视化库，支持现代化 Web 浏览器，提供非常完美的展示功能。Bokeh 的目标是使用 D3.js样式提供优雅，简洁新颖的图形化风格，同时提供大型数据集的高性能交互功能。Boken 可以快速的创建交互式的绘图，仪表盘和数据应用。</p><p>而 最顶端的的 HoloViews 结合了这些库，其哲学思想是 <span class="label primary">"用最简单的方式让数据本身去表达自己"</span>，而且它包含丰富的可组合元素库，可以覆盖、嵌套和轻松定位。同时，它还支持快速数据探索。</p><p>HoloViews 可以和 Seaborn、Pandas 或者 Bokeh 组合使用。</p><p>##</p><p>##</p><p>##</p>]]></content>
     
@@ -31,19 +31,17 @@
     
     </summary>
     
-      <category term="软件技能" scheme="https://hnyang.me/categories/%E8%BD%AF%E4%BB%B6%E6%8A%80%E8%83%BD/"/>
     
+      <category term="Python" scheme="https://blog.yanghn.com/tags/Python/"/>
     
-      <category term="Python" scheme="https://hnyang.me/tags/Python/"/>
-    
-      <category term="HoloViews" scheme="https://hnyang.me/tags/HoloViews/"/>
+      <category term="HoloViews" scheme="https://blog.yanghn.com/tags/HoloViews/"/>
     
   </entry>
   
   <entry>
     <title>MATLAB 笔记</title>
-    <link href="https://hnyang.me/posts/52233/"/>
-    <id>https://hnyang.me/posts/52233/</id>
+    <link href="https://blog.yanghn.com/posts/52233/"/>
+    <id>https://blog.yanghn.com/posts/52233/</id>
     <published>2019-04-07T14:37:00.000Z</published>
     <updated>2019-04-08T08:41:31.000Z</updated>
     
@@ -55,17 +53,17 @@
     
     </summary>
     
-      <category term="软件技能" scheme="https://hnyang.me/categories/%E8%BD%AF%E4%BB%B6%E6%8A%80%E8%83%BD/"/>
+      <category term="软件技能" scheme="https://blog.yanghn.com/categories/%E8%BD%AF%E4%BB%B6%E6%8A%80%E8%83%BD/"/>
     
     
-      <category term="MATLAB" scheme="https://hnyang.me/tags/MATLAB/"/>
+      <category term="MATLAB" scheme="https://blog.yanghn.com/tags/MATLAB/"/>
     
   </entry>
   
   <entry>
     <title>Python 进阶笔记</title>
-    <link href="https://hnyang.me/posts/47671/"/>
-    <id>https://hnyang.me/posts/47671/</id>
+    <link href="https://blog.yanghn.com/posts/47671/"/>
+    <id>https://blog.yanghn.com/posts/47671/</id>
     <published>2019-03-21T06:14:53.000Z</published>
     <updated>2019-04-08T02:03:37.000Z</updated>
     
@@ -77,17 +75,17 @@
     
     </summary>
     
-      <category term="软件技能" scheme="https://hnyang.me/categories/%E8%BD%AF%E4%BB%B6%E6%8A%80%E8%83%BD/"/>
+      <category term="软件技能" scheme="https://blog.yanghn.com/categories/%E8%BD%AF%E4%BB%B6%E6%8A%80%E8%83%BD/"/>
     
     
-      <category term="Python" scheme="https://hnyang.me/tags/Python/"/>
+      <category term="Python" scheme="https://blog.yanghn.com/tags/Python/"/>
     
   </entry>
   
   <entry>
     <title>CS229 笔记【0】：机器学习中的数学</title>
-    <link href="https://hnyang.me/posts/33591/"/>
-    <id>https://hnyang.me/posts/33591/</id>
+    <link href="https://blog.yanghn.com/posts/33591/"/>
+    <id>https://blog.yanghn.com/posts/33591/</id>
     <published>2019-03-20T18:35:40.000Z</published>
     <updated>2019-04-09T01:03:44.000Z</updated>
     
@@ -99,21 +97,21 @@
     
     </summary>
     
-      <category term="机器学习" scheme="https://hnyang.me/categories/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/"/>
+      <category term="机器学习" scheme="https://blog.yanghn.com/categories/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/"/>
     
     
-      <category term="机器学习" scheme="https://hnyang.me/tags/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/"/>
+      <category term="机器学习" scheme="https://blog.yanghn.com/tags/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/"/>
     
-      <category term="数学" scheme="https://hnyang.me/tags/%E6%95%B0%E5%AD%A6/"/>
+      <category term="数学" scheme="https://blog.yanghn.com/tags/%E6%95%B0%E5%AD%A6/"/>
     
-      <category term="cs229" scheme="https://hnyang.me/tags/cs229/"/>
+      <category term="cs229" scheme="https://blog.yanghn.com/tags/cs229/"/>
     
   </entry>
   
   <entry>
     <title>CS229 笔记【1】：线性模型</title>
-    <link href="https://hnyang.me/posts/41333/"/>
-    <id>https://hnyang.me/posts/41333/</id>
+    <link href="https://blog.yanghn.com/posts/41333/"/>
+    <id>https://blog.yanghn.com/posts/41333/</id>
     <published>2019-03-18T06:06:46.000Z</published>
     <updated>2019-04-09T16:25:20.000Z</updated>
     
@@ -125,19 +123,19 @@
     
     </summary>
     
-      <category term="机器学习" scheme="https://hnyang.me/categories/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/"/>
+      <category term="机器学习" scheme="https://blog.yanghn.com/categories/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/"/>
     
     
-      <category term="CS229" scheme="https://hnyang.me/tags/CS229/"/>
+      <category term="CS229" scheme="https://blog.yanghn.com/tags/CS229/"/>
     
-      <category term="机器学习" scheme="https://hnyang.me/tags/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/"/>
+      <category term="机器学习" scheme="https://blog.yanghn.com/tags/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/"/>
     
   </entry>
   
   <entry>
     <title>NetworkX 笔记</title>
-    <link href="https://hnyang.me/posts/53355/"/>
-    <id>https://hnyang.me/posts/53355/</id>
+    <link href="https://blog.yanghn.com/posts/53355/"/>
+    <id>https://blog.yanghn.com/posts/53355/</id>
     <published>2019-03-11T00:26:40.000Z</published>
     <updated>2019-11-02T07:12:26.494Z</updated>
     
@@ -149,19 +147,19 @@
     
     </summary>
     
-      <category term="软件技能" scheme="https://hnyang.me/categories/%E8%BD%AF%E4%BB%B6%E6%8A%80%E8%83%BD/"/>
+      <category term="软件技能" scheme="https://blog.yanghn.com/categories/%E8%BD%AF%E4%BB%B6%E6%8A%80%E8%83%BD/"/>
     
     
-      <category term="Python" scheme="https://hnyang.me/tags/Python/"/>
+      <category term="Python" scheme="https://blog.yanghn.com/tags/Python/"/>
     
-      <category term="NetworkX" scheme="https://hnyang.me/tags/NetworkX/"/>
+      <category term="NetworkX" scheme="https://blog.yanghn.com/tags/NetworkX/"/>
     
   </entry>
   
   <entry>
     <title>Pandas 常用核心函数与方法</title>
-    <link href="https://hnyang.me/posts/55796/"/>
-    <id>https://hnyang.me/posts/55796/</id>
+    <link href="https://blog.yanghn.com/posts/55796/"/>
+    <id>https://blog.yanghn.com/posts/55796/</id>
     <published>2019-02-20T10:53:43.000Z</published>
     <updated>2019-05-09T12:13:09.000Z</updated>
     
@@ -178,8 +176,8 @@
   
   <entry>
     <title>Jupyter Notebook 使用方法记录</title>
-    <link href="https://hnyang.me/posts/54421/"/>
-    <id>https://hnyang.me/posts/54421/</id>
+    <link href="https://blog.yanghn.com/posts/54421/"/>
+    <id>https://blog.yanghn.com/posts/54421/</id>
     <published>2019-02-20T09:42:42.000Z</published>
     <updated>2019-04-10T06:47:11.000Z</updated>
     
@@ -192,14 +190,14 @@
     </summary>
     
     
-      <category term="Jupyter" scheme="https://hnyang.me/tags/Jupyter/"/>
+      <category term="Jupyter" scheme="https://blog.yanghn.com/tags/Jupyter/"/>
     
   </entry>
   
   <entry>
     <title>Hexo 文字排版全纪录</title>
-    <link href="https://hnyang.me/posts/40915/"/>
-    <id>https://hnyang.me/posts/40915/</id>
+    <link href="https://blog.yanghn.com/posts/40915/"/>
+    <id>https://blog.yanghn.com/posts/40915/</id>
     <published>2019-01-17T03:12:24.000Z</published>
     <updated>2019-04-07T14:38:42.000Z</updated>
     
@@ -211,10 +209,10 @@
     
     </summary>
     
-      <category term="hexo" scheme="https://hnyang.me/categories/hexo/"/>
+      <category term="hexo" scheme="https://blog.yanghn.com/categories/hexo/"/>
     
     
-      <category term="hexo" scheme="https://hnyang.me/tags/hexo/"/>
+      <category term="hexo" scheme="https://blog.yanghn.com/tags/hexo/"/>
     
   </entry>
   

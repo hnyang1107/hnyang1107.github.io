@@ -4,9 +4,6 @@
     <title><![CDATA[交互式可视化利器：HoloViews]]></title>
     <url>%2Fposts%2F43158%2F</url>
     <content type="text"><![CDATA[“Making data analysis and visualization seamless and simple”在了解 HoloViews 之前，我们先看一张图：这张图是 PyCon 2017 的相关演讲，主题是 “The Python Visualization Landscape“，其中介绍了一些 Python 可视化库的基本架构与分布.python可视化库可以大致分为几类：基于 matplotlib 的可视化库基于 JS 的可视化库基于上述两者或其他组合功能的库matplotlib 是 python可视化库的基础。matplotlib 库的设计参考了 matlab，但其有两个主要缺点：学习成本比较高对网页以及交互式绘图的支持较弱而基于 JS 的可视化库可以解决这些问题，基于 JavaScript 的可视化程序只需要一个浏览器即可实现，复杂的交互也轻而易举，比较常用的是 Bokeh 和 Plotly，Bokeh (Bokeh.js) 是一个 Python 交互式可视化库，支持现代化 Web 浏览器，提供非常完美的展示功能。Bokeh 的目标是使用 D3.js样式提供优雅，简洁新颖的图形化风格，同时提供大型数据集的高性能交互功能。Boken 可以快速的创建交互式的绘图，仪表盘和数据应用。而 最顶端的的 HoloViews 结合了这些库，其哲学思想是 "用最简单的方式让数据本身去表达自己"，而且它包含丰富的可组合元素库，可以覆盖、嵌套和轻松定位。同时，它还支持快速数据探索。HoloViews 可以和 Seaborn、Pandas 或者 Bokeh 组合使用。######]]></content>
-      <categories>
-        <category>软件技能</category>
-      </categories>
       <tags>
         <tag>Python</tag>
         <tag>HoloViews</tag>
