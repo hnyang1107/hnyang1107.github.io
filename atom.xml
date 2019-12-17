@@ -5,9 +5,9 @@
   <subtitle>「求知若饥，虚心若愚」</subtitle>
   <link href="/atom.xml" rel="self"/>
   
-  <link href="https://blog.yanghn.com/"/>
+  <link href="https://yanghn.com/"/>
   <updated>2019-11-14T13:11:11.292Z</updated>
-  <id>https://blog.yanghn.com/</id>
+  <id>https://yanghn.com/</id>
   
   <author>
     <name>yanghn</name>
@@ -18,8 +18,8 @@
   
   <entry>
     <title>MATLAB 笔记</title>
-    <link href="https://blog.yanghn.com/posts/52233/"/>
-    <id>https://blog.yanghn.com/posts/52233/</id>
+    <link href="https://yanghn.com/posts/52233/"/>
+    <id>https://yanghn.com/posts/52233/</id>
     <published>2019-04-07T14:37:00.000Z</published>
     <updated>2019-11-14T13:11:11.292Z</updated>
     
@@ -31,17 +31,17 @@
     
     </summary>
     
-      <category term="软件技能" scheme="https://blog.yanghn.com/categories/%E8%BD%AF%E4%BB%B6%E6%8A%80%E8%83%BD/"/>
+      <category term="软件技能" scheme="https://yanghn.com/categories/%E8%BD%AF%E4%BB%B6%E6%8A%80%E8%83%BD/"/>
     
     
-      <category term="MATLAB" scheme="https://blog.yanghn.com/tags/MATLAB/"/>
+      <category term="MATLAB" scheme="https://yanghn.com/tags/MATLAB/"/>
     
   </entry>
   
   <entry>
     <title>Python 进阶笔记</title>
-    <link href="https://blog.yanghn.com/posts/47671/"/>
-    <id>https://blog.yanghn.com/posts/47671/</id>
+    <link href="https://yanghn.com/posts/47671/"/>
+    <id>https://yanghn.com/posts/47671/</id>
     <published>2019-03-21T06:14:53.000Z</published>
     <updated>2019-04-08T02:03:37.000Z</updated>
     
@@ -53,17 +53,17 @@
     
     </summary>
     
-      <category term="软件技能" scheme="https://blog.yanghn.com/categories/%E8%BD%AF%E4%BB%B6%E6%8A%80%E8%83%BD/"/>
+      <category term="软件技能" scheme="https://yanghn.com/categories/%E8%BD%AF%E4%BB%B6%E6%8A%80%E8%83%BD/"/>
     
     
-      <category term="Python" scheme="https://blog.yanghn.com/tags/Python/"/>
+      <category term="Python" scheme="https://yanghn.com/tags/Python/"/>
     
   </entry>
   
   <entry>
     <title>CS229 笔记【0】：机器学习中的数学</title>
-    <link href="https://blog.yanghn.com/posts/33591/"/>
-    <id>https://blog.yanghn.com/posts/33591/</id>
+    <link href="https://yanghn.com/posts/33591/"/>
+    <id>https://yanghn.com/posts/33591/</id>
     <published>2019-03-20T18:35:40.000Z</published>
     <updated>2019-04-09T01:03:44.000Z</updated>
     
@@ -75,21 +75,21 @@
     
     </summary>
     
-      <category term="机器学习" scheme="https://blog.yanghn.com/categories/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/"/>
+      <category term="机器学习" scheme="https://yanghn.com/categories/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/"/>
     
     
-      <category term="机器学习" scheme="https://blog.yanghn.com/tags/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/"/>
+      <category term="机器学习" scheme="https://yanghn.com/tags/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/"/>
     
-      <category term="数学" scheme="https://blog.yanghn.com/tags/%E6%95%B0%E5%AD%A6/"/>
+      <category term="数学" scheme="https://yanghn.com/tags/%E6%95%B0%E5%AD%A6/"/>
     
-      <category term="cs229" scheme="https://blog.yanghn.com/tags/cs229/"/>
+      <category term="cs229" scheme="https://yanghn.com/tags/cs229/"/>
     
   </entry>
   
   <entry>
     <title>CS229 笔记【1】：线性模型</title>
-    <link href="https://blog.yanghn.com/posts/41333/"/>
-    <id>https://blog.yanghn.com/posts/41333/</id>
+    <link href="https://yanghn.com/posts/41333/"/>
+    <id>https://yanghn.com/posts/41333/</id>
     <published>2019-03-18T06:06:46.000Z</published>
     <updated>2019-11-14T14:25:08.004Z</updated>
     
@@ -101,19 +101,19 @@
     
     </summary>
     
-      <category term="机器学习" scheme="https://blog.yanghn.com/categories/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/"/>
+      <category term="机器学习" scheme="https://yanghn.com/categories/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/"/>
     
     
-      <category term="CS229" scheme="https://blog.yanghn.com/tags/CS229/"/>
+      <category term="CS229" scheme="https://yanghn.com/tags/CS229/"/>
     
-      <category term="机器学习" scheme="https://blog.yanghn.com/tags/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/"/>
+      <category term="机器学习" scheme="https://yanghn.com/tags/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/"/>
     
   </entry>
   
   <entry>
     <title>NetworkX 笔记</title>
-    <link href="https://blog.yanghn.com/posts/53355/"/>
-    <id>https://blog.yanghn.com/posts/53355/</id>
+    <link href="https://yanghn.com/posts/53355/"/>
+    <id>https://yanghn.com/posts/53355/</id>
     <published>2019-03-11T00:26:40.000Z</published>
     <updated>2019-11-14T14:20:25.702Z</updated>
     
@@ -125,19 +125,19 @@
     
     </summary>
     
-      <category term="软件技能" scheme="https://blog.yanghn.com/categories/%E8%BD%AF%E4%BB%B6%E6%8A%80%E8%83%BD/"/>
+      <category term="软件技能" scheme="https://yanghn.com/categories/%E8%BD%AF%E4%BB%B6%E6%8A%80%E8%83%BD/"/>
     
     
-      <category term="Python" scheme="https://blog.yanghn.com/tags/Python/"/>
+      <category term="Python" scheme="https://yanghn.com/tags/Python/"/>
     
-      <category term="NetworkX" scheme="https://blog.yanghn.com/tags/NetworkX/"/>
+      <category term="NetworkX" scheme="https://yanghn.com/tags/NetworkX/"/>
     
   </entry>
   
   <entry>
     <title>Pandas 常用核心函数与方法</title>
-    <link href="https://blog.yanghn.com/posts/55796/"/>
-    <id>https://blog.yanghn.com/posts/55796/</id>
+    <link href="https://yanghn.com/posts/55796/"/>
+    <id>https://yanghn.com/posts/55796/</id>
     <published>2019-02-20T10:53:43.000Z</published>
     <updated>2019-11-14T13:58:05.606Z</updated>
     
@@ -154,8 +154,8 @@
   
   <entry>
     <title>Jupyter Notebook 使用方法记录</title>
-    <link href="https://blog.yanghn.com/posts/54421/"/>
-    <id>https://blog.yanghn.com/posts/54421/</id>
+    <link href="https://yanghn.com/posts/54421/"/>
+    <id>https://yanghn.com/posts/54421/</id>
     <published>2019-02-20T09:42:42.000Z</published>
     <updated>2019-04-10T06:47:11.000Z</updated>
     
@@ -168,14 +168,14 @@
     </summary>
     
     
-      <category term="Jupyter" scheme="https://blog.yanghn.com/tags/Jupyter/"/>
+      <category term="Jupyter" scheme="https://yanghn.com/tags/Jupyter/"/>
     
   </entry>
   
   <entry>
     <title>Hexo 文字排版全纪录</title>
-    <link href="https://blog.yanghn.com/posts/40915/"/>
-    <id>https://blog.yanghn.com/posts/40915/</id>
+    <link href="https://yanghn.com/posts/40915/"/>
+    <id>https://yanghn.com/posts/40915/</id>
     <published>2019-01-17T03:12:24.000Z</published>
     <updated>2019-04-07T14:38:42.000Z</updated>
     
@@ -187,10 +187,10 @@
     
     </summary>
     
-      <category term="hexo" scheme="https://blog.yanghn.com/categories/hexo/"/>
+      <category term="hexo" scheme="https://yanghn.com/categories/hexo/"/>
     
     
-      <category term="hexo" scheme="https://blog.yanghn.com/tags/hexo/"/>
+      <category term="hexo" scheme="https://yanghn.com/tags/hexo/"/>
     
   </entry>
   
