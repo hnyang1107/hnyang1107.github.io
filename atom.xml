@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
-  <title>我的技术经验分享</title>
+  <title>FreeMind</title>
   
   <subtitle>「求知若饥，虚心若愚」</subtitle>
   <link href="/atom.xml" rel="self"/>
