@@ -1,6 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[数据库与 MySQL 笔记]]></title>
+    <url>%2Fposts%2F9977%2F</url>
+    <content type="text"><![CDATA[数据库相关概念DB: 数据库（database） 存储数据的“仓库”，保存了一系列有组织的数据DBMS: 数据库管理系统（Database Management System）用于管理DB中的数据，数据库是通过DBMS创建和操作的容器，可分为两类：1.基于共享文件系统（Access）2.基于客户机 [mysql]-服务端 [mysqld]（MySQL、Oracle ）(数据安装在服务端)SQL: 结构化查询语言（Structure Query Language）专门用来与数据库通信的语言不是某个特定数据库供应商专有的语言，几乎所有 DBMS 都支持 SQL连接数据库mysql -h (host) + -P (port) + -u (user) + -p (passport)SQL 常用命令查看当前所有数据库：SHOW DATABASE;打开指定的库：USE 库名;查看当前库的所有表：SHOW TABLES;查看其他库的所有表：SHOW TABLES FROM 库名;创建表：12345CREATE TABLE 表名( 列名 列类型, 列名 列类型, ...);查看表结构：desc 表名;查看服务器版本：SELECT VERSION();MySQL 语法规范不区分大小写，建议关键字大写，表名列名小写每条命令用分号结尾缩进换行不影响代码运行注释：+单行注释：#注释内容或 -- 注释内容+多行注释：/* 注释内容 */]]></content>
+      <categories>
+        <category>数据库</category>
+      </categories>
+      <tags>
+        <tag>SQL</tag>
+      </tags>
+  </entry>
+  <entry>
     <title><![CDATA[MATLAB 笔记]]></title>
     <url>%2Fposts%2F52233%2F</url>
     <content type="text"><![CDATA[与其他编程语言不同，MATLAB 是从 1 开始索引的，通过括号进行索引: A(1)一般来说有个 dim 参数，类似于 numpy 中 axis 参数，1 表示计算每列，2 表示计算每行，如 mean(A,1): 计算每一列的均值，返回一个行向量矩阵基本操作将矩阵 A 列向量化：A(:)将矩阵 A B 横着合并：[A B]将矩阵 A B 竖着合并：[A; B]所有列求和：sum(A,2)画图操作标记 x 轴：xlabel(&#39;time&#39;)标记 y 轴：ylabel(&#39;time&#39;)给 x 轴 y 轴修改坐标轴范围：axis([0.5 1 -1 1])（x 0.5 到 1，y -1 到 1）标记曲线：legend(&#39;sin&#39;, &#39;cos&#39;)保存文件：print -dpng &#39;myplot.png&#39;画多图在同一figure中：subplot(1,2,1)（生成 1*2 的布局，首先画第一张图）对矩阵画图观察矩阵分布大小：imagesc(A)（通常配合 colorbar colormap gray 生成带灰度 bar 的矩阵数值大小分布图）在当前画图状态下继续画图：hold on在新的画图状态下画图：hold off##]]></content>
