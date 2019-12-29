@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://yanghn.com/"/>
-  <updated>2019-12-29T07:02:24.346Z</updated>
+  <updated>2019-12-29T07:06:29.929Z</updated>
   <id>https://yanghn.com/</id>
   
   <author>
@@ -21,9 +21,9 @@
     <link href="https://yanghn.com/posts/9977/"/>
     <id>https://yanghn.com/posts/9977/</id>
     <published>2019-12-28T08:09:38.000Z</published>
-    <updated>2019-12-29T07:02:24.346Z</updated>
+    <updated>2019-12-29T07:06:29.929Z</updated>
     
-    <content type="html"><![CDATA[<p class="description">“Get the dolphin up to speed”</p><a id="more"></a><h2><span id="1-数据库相关概念">1. 数据库相关概念</span></h2><ul><li><strong>DB</strong>: 数据库（database） 存储数据的“仓库”，保存了一系列有组织的数据</li><li><strong>DBMS</strong>: 数据库管理系统（Database Management System）用于管理DB中的数据，数据库是通过DBMS创建和操作的容器，可分为两类：<blockquote><p>1.基于共享文件系统（Access）<br>2.基于客户机 【mysql】-服务端 【mysqld】（MySQL、Oracle ）(数据安装在服务端)</p></blockquote></li><li><strong>SQL</strong>: 结构化查询语言（Structure Query Language）专门用来与数据库通信的语言<blockquote><p>不是某个特定数据库供应商专有的语言，几乎所有 DBMS 都支持 SQL</p></blockquote></li></ul><h2><span id="2-连接数据库">2. 连接数据库</span></h2><ul><li><code>mysql -h (host) + -P (port) + -u (user) + -p (passport)</code></li></ul><h2><span id="3-sql-常用命令">3. SQL 常用命令</span></h2><ul><li><strong>查看当前所有数据库</strong>：<code>SHOW DATABASE;</code></li><li><strong>打开指定的库</strong>：<code>USE 库名;</code></li><li><strong>查看当前库的所有表</strong>：<code>SHOW TABLES;</code></li><li><strong>查看其他库的所有表</strong>：<code>SHOW TABLES FROM 库名;</code></li><li><p><strong>创建表</strong>：</p><figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">CREATE</span> <span class="keyword">TABLE</span> 表名(</span><br><span class="line">    列名 列类型,</span><br><span class="line">    列名 列类型,</span><br><span class="line">    ...</span><br><span class="line">);</span><br></pre></td></tr></table></figure></li><li><p><strong>查看表结构</strong>：<code>desc 表名;</code></p></li><li><strong>查询当前操作的数据库</strong>：<code>SELECT DATABASE();</code></li><li><strong>查看服务器版本</strong>：<code>SELECT VERSION();</code></li></ul><h2><span id="4-mysql-语法规范">4. MySQL 语法规范</span></h2><ul><li>不区分大小写，建议关键字大写，表名列名小写</li><li>每条命令用分号结尾</li><li>缩进换行不影响代码运行</li><li>注释：<ul><li>单行注释：<code>#注释内容</code> 或 <code>-- 注释内容</code></li><li>多行注释：<code>/* 注释内容 */</code></li></ul></li></ul><h2><span id="5-dql-data-query-language">5. DQL (Data Query Language)：</span></h2><h3><span id="51-基础查询">5.1 基础查询</span></h3><h3><span id="52-条件查询">5.2 条件查询</span></h3><h2><span id="6-dml-data-manipulation-language">6. DML (Data Manipulation Language)：</span></h2><h2><span id="7-ddl-data-define-language">7. DDL (Data Define Language)：</span></h2><h2><span id="8-tcl-transaction-control-language">8. TCL (Transaction Control Language)：</span></h2>]]></content>
+    <content type="html"><![CDATA[<p class="description">“Get the dolphin up to speed”</p><a id="more"></a><h2><span id="1-数据库相关概念">1. 数据库相关概念</span></h2><ul><li><strong>DB</strong>: 数据库（database） 存储数据的“仓库”，保存了一系列有组织的数据</li><li><strong>DBMS</strong>: 数据库管理系统（Database Management System）用于管理DB中的数据，数据库是通过DBMS创建和操作的容器，可分为两类：<blockquote><p>1.基于共享文件系统（Access）<br>2.基于客户机 【mysql】-服务端 【mysqld】（MySQL、Oracle ）(数据安装在服务端)</p></blockquote></li><li><strong>SQL</strong>: 结构化查询语言（Structure Query Language）专门用来与数据库通信的语言<blockquote><p>不是某个特定数据库供应商专有的语言，几乎所有 DBMS 都支持 SQL</p></blockquote></li></ul><h2><span id="2-连接数据库">2. 连接数据库</span></h2><ul><li><code>mysql -h (host) + -P (port) + -u (user) + -p (passport)</code></li></ul><h2><span id="3-sql-基本命令">3. SQL 基本命令</span></h2><ul><li><strong>查看当前所有数据库</strong>：<code>SHOW DATABASE;</code></li><li><strong>打开指定的库</strong>：<code>USE 库名;</code></li><li><strong>查看当前库的所有表</strong>：<code>SHOW TABLES;</code></li><li><strong>查看其他库的所有表</strong>：<code>SHOW TABLES FROM 库名;</code></li><li><p><strong>创建表</strong>：</p><figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">CREATE</span> <span class="keyword">TABLE</span> 表名(</span><br><span class="line">    列名 列类型,</span><br><span class="line">    列名 列类型,</span><br><span class="line">    ...</span><br><span class="line">);</span><br></pre></td></tr></table></figure></li><li><p><strong>查看表结构</strong>：<code>desc 表名;</code></p></li><li><strong>查询当前操作的数据库</strong>：<code>SELECT DATABASE();</code></li><li><strong>查看服务器版本</strong>：<code>SELECT VERSION();</code></li></ul><h2><span id="4-mysql-语法规范">4. MySQL 语法规范</span></h2><ul><li>不区分大小写，建议关键字大写，表名列名小写</li><li>每条命令用分号结尾</li><li>缩进换行不影响代码运行</li><li>注释：<ul><li>单行注释：<code>#注释内容</code> 或 <code>-- 注释内容</code></li><li>多行注释：<code>/* 注释内容 */</code></li></ul></li></ul><h2><span id="5-dql-data-query-language">5. DQL (Data Query Language)：</span></h2><h3><span id="51-基础查询">5.1 基础查询</span></h3><h3><span id="52-条件查询">5.2 条件查询</span></h3><h2><span id="6-dml-data-manipulation-language">6. DML (Data Manipulation Language)：</span></h2><h2><span id="7-ddl-data-define-language">7. DDL (Data Define Language)：</span></h2><h2><span id="8-tcl-transaction-control-language">8. TCL (Transaction Control Language)：</span></h2>]]></content>
     
     <summary type="html">
     
@@ -150,9 +150,9 @@
       <category term="软件技能" scheme="https://yanghn.com/categories/%E8%BD%AF%E4%BB%B6%E6%8A%80%E8%83%BD/"/>
     
     
-      <category term="Python" scheme="https://yanghn.com/tags/Python/"/>
-    
       <category term="NetworkX" scheme="https://yanghn.com/tags/NetworkX/"/>
+    
+      <category term="Python" scheme="https://yanghn.com/tags/Python/"/>
     
   </entry>
   
