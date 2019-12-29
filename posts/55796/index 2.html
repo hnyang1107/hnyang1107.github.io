@@ -1,0 +1,317 @@
+<!DOCTYPE html><html class="theme-next gemini use-motion" lang="zh-CN"><head><meta name="generator" content="Hexo 3.8.0"><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=2"><meta name="theme-color" content="#222"><link rel="stylesheet" href="https://fonts.loli.net/css?family=Noto Serif SC:300,300italic,400,400italic,700,700italic&subset=latin,latin-ext"><link rel="stylesheet" href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2"><link rel="stylesheet" href="/css/main.css?v=6.7.0"><link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=6.7.0"><link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png?v=6.7.0"><link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png?v=6.7.0"><link rel="mask-icon" href="/images/logo.svg?v=6.7.0" color="#222"><script id="hexo.configurations">var NexT=window.NexT||{},CONFIG={root:"/",scheme:"Gemini",version:"6.7.0",sidebar:{position:"left",display:"post",offset:12,b2t:!1,scrollpercent:!0,onmobile:!1},fancybox:!1,fastclick:!1,lazyload:!1,tabs:!0,motion:{enable:!0,async:!1,transition:{post_block:"fadeIn",post_header:"slideDownIn",post_body:"slideDownIn",coll_header:"slideLeftIn",sidebar:"slideUpIn"}},algolia:{applicationID:"",apiKey:"",indexName:"",hits:{per_page:10},labels:{input_placeholder:"Search for Posts",hits_empty:"We didn't find any results for the search: ${query}",hits_stats:"${hits} results found in ${time} ms"}}}</script><meta name="description" content="“A powerful Python data analysis toolkit”"><meta name="keywords" content="数据科学"><meta property="og:type" content="article"><meta property="og:title" content="Pandas 常用核心函数与方法"><meta property="og:url" content="https://yanghn.com/posts/55796/index.html"><meta property="og:site_name" content="FreeMind"><meta property="og:description" content="“A powerful Python data analysis toolkit”"><meta property="og:locale" content="zh-CN"><meta property="og:image" content="https://hnyang.oss-cn-shanghai.aliyuncs.com/2019-03-11-144156.jpg"><meta property="og:updated_time" content="2019-11-14T13:58:05.606Z"><meta name="twitter:card" content="summary"><meta name="twitter:title" content="Pandas 常用核心函数与方法"><meta name="twitter:description" content="“A powerful Python data analysis toolkit”"><meta name="twitter:image" content="https://hnyang.oss-cn-shanghai.aliyuncs.com/2019-03-11-144156.jpg"><link rel="canonical" href="https://yanghn.com/posts/55796/"><script id="page.configurations">CONFIG.page={sidebar:""}</script><title>Pandas 常用核心函数与方法 | FreeMind</title><noscript><style>.sidebar-inner,.use-motion .brand,.use-motion .collection-title,.use-motion .comments,.use-motion .menu-item,.use-motion .motion-element,.use-motion .pagination,.use-motion .post-block,.use-motion .post-body,.use-motion .post-header{opacity:initial}.use-motion .logo,.use-motion .site-subtitle,.use-motion .site-title{opacity:initial;top:initial}.use-motion .logo-line-before i{left:initial}.use-motion .logo-line-after i{right:initial}</style></noscript></head><body itemscope itemtype="http://schema.org/WebPage" lang="zh-CN"><div class="container sidebar-position-left page-post-detail"><div class="headband"></div><header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader"><div class="header-inner"><div class="site-brand-wrapper"><div class="site-meta"><div class="custom-logo-site-title"><a href="/" class="brand" rel="start"><span class="logo-line-before"><i></i></span> <span class="site-title">FreeMind</span> <span class="logo-line-after"><i></i></span></a></div><h1 class="site-subtitle" itemprop="description">「思 · 藏」</h1></div><div class="site-nav-toggle"><button aria-label="切换导航栏"><span class="btn-bar"></span> <span class="btn-bar"></span> <span class="btn-bar"></span></button></div></div><nav class="site-nav"><ul id="menu" class="menu"><li class="menu-item menu-item-home"><a href="/" rel="section"><i class="menu-item-icon fa fa-fw fa-home"></i><br>首页</a></li><li class="menu-item menu-item-tags"><a href="/tags/" rel="section"><i class="menu-item-icon fa fa-fw fa-tags"></i><br>标签<span class="badge">10</span></a></li><li class="menu-item menu-item-categories"><a href="/categories/" rel="section"><i class="menu-item-icon fa fa-fw fa-th"></i><br>分类<span class="badge">4</span></a></li><li class="menu-item menu-item-archives"><a href="/archives/" rel="section"><i class="menu-item-icon fa fa-fw fa-archive"></i><br>归档<span class="badge">9</span></a></li><li class="menu-item menu-item-search"><a href="javascript:;" class="popup-trigger"><i class="menu-item-icon fa fa-search fa-fw"></i><br>搜索</a></li></ul><div class="site-search"><div class="popup search-popup local-search-popup"><div class="local-search-header clearfix"><span class="search-icon"><i class="fa fa-search"></i> </span><span class="popup-btn-close"><i class="fa fa-times-circle"></i></span><div class="local-search-input-wrapper"><input autocomplete="off" placeholder="搜索..." spellcheck="false" type="text" id="local-search-input"></div></div><div id="local-search-result"></div></div></div></nav></div></header><main id="main" class="main"><div class="main-inner"><div class="content-wrap"><div id="content" class="content"><div id="posts" class="posts-expand"><article class="post post-type-normal" itemscope itemtype="http://schema.org/Article"><div class="post-block"><link itemprop="mainEntityOfPage" href="https://yanghn.com/posts/55796/"><span hidden itemprop="author" itemscope itemtype="http://schema.org/Person"><meta itemprop="name" content="H.N.Yang"><meta itemprop="description" content=""><meta itemprop="image" content="/images/header.jpg"></span><span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization"><meta itemprop="name" content="FreeMind"></span><header class="post-header"><h2 class="post-title" itemprop="name headline">Pandas 常用核心函数与方法</h2><div class="post-meta"><i class="fa fa-thumb-tack"></i> <font color="black">【置顶】</font> <span class="post-meta-divider">|</span> <span class="post-time"><span class="post-meta-item-icon"><i class="fa fa-calendar-o"></i> </span><span class="post-meta-item-text">发表于</span> <time title="创建时间：2019-02-20 18:53:43" itemprop="dateCreated datePublished" datetime="2019-02-20T18:53:43+08:00">2019-02-20</time> <span class="post-meta-divider">|</span> <span class="post-meta-item-icon"><i class="fa fa-calendar-check-o"></i> </span><span class="post-meta-item-text">更新于</span> <time title="修改时间：2019-11-14 21:58:05" itemprop="dateModified" datetime="2019-11-14T21:58:05+08:00">2019-11-14</time></span></div></header><div class="post-body" itemprop="articleBody"><p class="description">“A powerful Python data analysis toolkit”</p><a id="more"></a><div class="note warning"><p>当前 Pandas 版本为 <code>0.24.1</code></p></div><h2 id="数据选取、索引、采集"><a href="#数据选取、索引、采集" class="headerlink" title="数据选取、索引、采集"></a>数据选取、索引、采集</h2><ul><li><code>.loc</code>：利用索引定位，必须输入索引，输入索引不存在时会报错</li><li><code>.iloc</code>：i 表示 integer position，利用整数位置进行定位<div class="note primary"><p>若用 <code>df.loc</code>、 <code>df.iloc</code> 或者 <code>df[&#39;col&#39;]</code> 选取子集，是选取了原来 <code>dataframe</code> 的视图而不是副本，修改这个子集会修改原来的 <code>dataframe</code> ，所以要选取副本，再加上 <code>.copy()</code> 可创建副本，有时候 <code>Pandas</code> 会抛出 <code>SettingWithCopyWarning</code> 的警告，绝大部分是因为副本视图问题造成的。</p></div></li><li><strong>选取多行</strong>：<code>df.loc[[index_name1,index_name2]]</code></li><li><strong>选取多列</strong>：<code>df[[col_name1, col_name2]]</code></li><li><strong>正则表达式选取</strong>：<code>df[&#39;new_col&#39;] = df[&#39;col&#39;].str.extract(&#39;regex&#39;)</code> 按照 <code>regex</code> 正则表达式选取 <code>col</code> 列中每一元素，结果保存在 <code>new_col</code> ，查看更多请点击 <a href="https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.Series.str.extract.html" target="_blank" rel="noopener"><code>pandas.Series.str.extract</code></a></li><li><strong>正则表达式替换文本</strong>：<code>df[&#39;col&#39;].str.replace(&#39;text&#39;,&#39;&#39;)</code>（将 <code>text</code> 文本替换为空文本，即删除特定的字符），关于字符串操作，可以参考 <a href="https://python3-cookbook.readthedocs.io/zh_CN/latest/chapters/p02_strings_and_text.html" target="_blank" rel="noopener">python3-cookbook</a></li><li><strong>查找缺失数据</strong>：<code>df.isnull()</code>：对整个 <code>df</code> 判断是否为空，返回一张大表，这张表每个元素为布尔值，<code>True</code> 则为空值.</li><li><p><strong>判断某一列（行）是否存在缺失值</strong>：<code>df.loc[&#39;index&#39;].isnull().any()</code>，存在则返回 <code>True</code>，不存在则返回 <code>False</code>.</p><div class="note primary"><p>对于数据很大的表，用 <code>df.isnull()</code> 不方便看到缺失值的具体位置，配合 <code>pandas.Series.any()</code> 函数可以确定某一行或者某一列出现缺失值，（<code>axis=0</code>: index,<code>axis=1</code>: columns），<code>any()</code> 方法表示判断给定的 Series 是否全部为 <code>False</code> ，若全为 <code>False</code> 则返回 <code>False</code>，如果有一个为 <code>True</code>，则返回 <code>True</code>，所以当返回 <code>True</code> 表示这一行或者这一列有缺失值</p></div></li><li><p><strong>判断某行（列）是否存在缺失数据</strong>：<code>df.loc[&#39;index&#39;].isnull().any()</code></p></li><li><strong>行循环</strong>：<code>for index, row in df.iterrows():</code></li></ul><h2 id="数据修改、删除、映射"><a href="#数据修改、删除、映射" class="headerlink" title="数据修改、删除、映射"></a>数据修改、删除、映射</h2><ul><li><strong>生成一个数据表</strong>：<code>df = pd.DataFrame(data={&#39;col1&#39;:[1,2,3],&#39;col2&#39;:[4,5,6]})</code></li><li><strong>增加一行</strong>：<code>df.loc[&#39;new_raw&#39;] = &#39;1&#39;</code></li><li><strong>增加一列</strong>：<code>df[&#39;new_colu&#39;]=&#39;1&#39;</code>.<div class="note danger no-icon"><p>按上面两种方式选取的子集为原来 <code>df</code> 的视图.</p></div></li><li><strong>删除一行</strong>：<code>df.drop(&#39;raw_name&#39;, axis=0, inplace=True)</code>，这里默认 <code>drop</code> 返回原 <code>df</code> 的视图，若设置 <code>inplace=True</code> 则修改 <code>df</code> 返回 <code>None</code>.</li><li><strong>删除一列</strong>：<code>df.drop(&#39;raw_name&#39;, axis=1, inplace=True)</code></li><li><strong>删除缺失数据</strong>：<code>df.dropna(axis=0, how=&#39;any&#39;, inplace=False, subset=[&#39;col&#39;])</code>. <code>axis=0</code> 表示检查这一行，按照 <code>how=&#39;any&#39;</code> (这一行只要出现了缺失，就删除)的方法删除这一行，<code>subset=[&#39;col&#39;]</code> 表示只检查 <code>col</code> 这一列是否有缺失值，<code>inplace=False</code> 表示删除后不替换原来的变量.</li></ul><ul><li><strong>修改列(行)名称</strong>：<code>df.rename(columns={&#39;old_col_name&#39;: &#39;new_col_name&#39;}, index={&#39;old_index_name&#39;: &#39;new_index_name&#39;},inplace=True)</code></li><li><strong>修改索引列名称</strong>：上面的方法无法改变索引列的名称，可以用 <code>df.index.name = &#39;new_name&#39;</code> 的方法.<div class="note warning"><p>凡是输入后返回一张表，说明原来带有 <code>inplace</code> 参数，如需替换则设置为 <code>True</code></p></div></li><li><strong>修改索引</strong>：<code>reset_index()</code> ，也可以将 MultiIndex 转换成普通的 Index.</li><li><strong>对索引排序</strong>：<code>df.sort_index()</code>，默认返回排序后的 <code>df</code>，可设置 <code>inplace</code> 参数.</li><li><strong>二级索引变成索引和列</strong>：<code>df.unstack()</code>，一般用在对两列的 <code>groupby</code>，之后转化为一级索引的 <code>DataFrame</code>，详情<a href="https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.DataFrame.unstack.html" target="_blank" rel="noopener">点击</a><h2 id="数据合并、连接、关系"><a href="#数据合并、连接、关系" class="headerlink" title="数据合并、连接、关系"></a>数据合并、连接、关系</h2></li></ul><h3 id="Concat-与-Append-操作"><a href="#Concat-与-Append-操作" class="headerlink" title="Concat 与 Append 操作"></a>Concat 与 Append 操作</h3><h3 id="Merge-操作"><a href="#Merge-操作" class="headerlink" title="Merge 操作"></a>Merge 操作</h3><h2 id="Group-By-技术"><a href="#Group-By-技术" class="headerlink" title="Group By 技术"></a>Group By 技术</h2><p>Pandas 提供了一个灵活高效的 groupby 功能，可以对某些标签或索引的局部进行累计分析，很多复杂的操作都可以化为 GroupBy 操作(不能保证是效率最高的).<br><a href="http://pandas.pydata.org/pandas-docs/stable/user_guide/groupby.html" target="_blank" rel="noopener">手册</a>上对于 GroupBy 主要可以分为以下三个步骤：<span class="label primary">分割-应用-组合</span><br></p><div class="note default no-icon"><ul><li>Splitting the data into groups based on some criteria.</li><li>Applying a function to each group independently.</li><li>Combining the results into a data structure.</li></ul></div><br><img src="https://hnyang.oss-cn-shanghai.aliyuncs.com/2019-03-11-144156.jpg" alt="" style="width:80%"><br>上图表现了这种过程，而中间的分割过程不需要显式地暴露出来，这一点十分重要。而且 GroupBy(经常)只需要一行代码， 就可以计算每组的和、均值、计数、最小值以及其他累计值。GroupBy 的用处就是将这些步骤进行抽象: 用户不需要知道在底层如何计算，只要把操作看成一个整体就够了.<p></p><h3 id="分割"><a href="#分割" class="headerlink" title="分割"></a>分割</h3><figure class="highlight python"><table><tr><td class="code"><pre><span class="line">In [<span class="number">1</span>]: df = pd.DataFrame(&#123;<span class="string">'X'</span>: [<span class="string">'A'</span>, <span class="string">'B'</span>, <span class="string">'A'</span>, <span class="string">'B'</span>], <span class="string">'Y'</span>: [<span class="number">1</span>, <span class="number">4</span>, <span class="number">3</span>, <span class="number">2</span>]&#125;)</span><br><span class="line"></span><br><span class="line">In [<span class="number">2</span>]: df</span><br><span class="line">Out[<span class="number">2</span>]:</span><br><span class="line">   X  Y</span><br><span class="line"><span class="number">0</span>  A  <span class="number">1</span></span><br><span class="line"><span class="number">1</span>  B  <span class="number">4</span></span><br><span class="line"><span class="number">2</span>  A  <span class="number">3</span></span><br><span class="line"><span class="number">3</span>  B  <span class="number">2</span></span><br><span class="line"></span><br><span class="line">In [<span class="number">3</span>]: df.groupby([<span class="string">'X'</span>])</span><br><span class="line">Out[<span class="number">3</span>]: &lt;pandas.core.groupby.groupby.DataFrameGroupBy object at <span class="number">0x1144ea198</span>&gt;</span><br></pre></td></tr></table></figure><p>可以看到，这里的返回值不是一个 DataFrame 对象，而是一个 <code>DataFrameGroupBy</code> 对象。 这个对象的魔力在于，你可以将它看成是一种特殊形式的 DataFrame，里面隐藏着若干组 数据，但是在没有应用累计函数之前不会计算。GroupBy 对象是一种非常灵活的抽象类型。在大多数场景中，可以将它看成是 DataFrame 的集合.<br></p><div class="note primary"><ul><li>默认情况下，GroupBy 对象会对 group keys 进行排序，如果分的组过多，可以设置 <code>groupby([&#39;X&#39;], sort=False)</code> 提高运行速度.</li><li>默认情况下对多列进行 GroupBy 会产生 <a href="http://pandas.pydata.org/pandas-docs/stable/user_guide/advanced.html#advanced-hierarchical" target="_blank" rel="noopener">MultiIndex</a>，可以设置 <code>as_index=False</code> 取消生成 MultiIndex，也可以用 <code>.reset_index()</code> 来实现.</li></ul></div><p></p><p>利用 <code>get_group(&#39;group_name&#39;)</code> 方法获得某一分组的 <code>DataFrame</code>，还可以利用 <code>.groups</code> 属性获得包含所有分组的字典，字典的键为组名，例如：<br></p><figure class="highlight python"><table><tr><td class="code"><pre><span class="line">In [<span class="number">27</span>]: df.groupby(<span class="string">'A'</span>).groups</span><br><span class="line">Out[<span class="number">27</span>]: </span><br><span class="line">&#123;<span class="string">'bar'</span>: Int64Index([<span class="number">1</span>, <span class="number">3</span>, <span class="number">5</span>], dtype=<span class="string">'int64'</span>),</span><br><span class="line"> <span class="string">'foo'</span>: Int64Index([<span class="number">0</span>, <span class="number">2</span>, <span class="number">4</span>, <span class="number">6</span>, <span class="number">7</span>], dtype=<span class="string">'int64'</span>)&#125;</span><br></pre></td></tr></table></figure><br><span class="label info">这个属性可以用于组的循环：</span><br><figure class="highlight python"><table><tr><td class="code"><pre><span class="line">In [<span class="number">57</span>]: grouped = df.groupby(<span class="string">'A'</span>)</span><br><span class="line"></span><br><span class="line">In [<span class="number">58</span>]: <span class="keyword">for</span> name, group <span class="keyword">in</span> grouped:</span><br><span class="line">   ....:     print(name)</span><br><span class="line">   ....:     print(group)</span><br><span class="line">   ....: </span><br><span class="line">bar</span><br><span class="line">     A      B         C         D</span><br><span class="line"><span class="number">1</span>  bar    one  <span class="number">0.254161</span>  <span class="number">1.511763</span></span><br><span class="line"><span class="number">3</span>  bar  three  <span class="number">0.215897</span> <span class="number">-0.990582</span></span><br><span class="line"><span class="number">5</span>  bar    two <span class="number">-0.077118</span>  <span class="number">1.211526</span></span><br><span class="line">foo</span><br><span class="line">     A      B         C         D</span><br><span class="line"><span class="number">0</span>  foo    one <span class="number">-0.575247</span>  <span class="number">1.346061</span></span><br><span class="line"><span class="number">2</span>  foo    two <span class="number">-1.143704</span>  <span class="number">1.627081</span></span><br><span class="line"><span class="number">4</span>  foo    two  <span class="number">1.193555</span> <span class="number">-0.441652</span></span><br><span class="line"><span class="number">6</span>  foo    one <span class="number">-0.408530</span>  <span class="number">0.268520</span></span><br><span class="line"><span class="number">7</span>  foo  three <span class="number">-0.862495</span>  <span class="number">0.024580</span></span><br></pre></td></tr></table></figure><p></p><h2 id="应用"><a href="#应用" class="headerlink" title="应用"></a>应用</h2><h3 id="累计与求和"><a href="#累计与求和" class="headerlink" title="累计与求和"></a>累计与求和</h3><p>最常用的方法有 <code>.sum()</code> 和 <code>.size()</code>，<code>.sum()</code> 是对其余所有数值型的列全部求和，<code>.size()</code> 是只计算聚合的列的个数。<br>若对多列进行聚合，默认会把将要聚合的列当做一个 <a href="https://pandas.pydata.org/pandas-docs/version/0.22/advanced.html#advanced-hierarchical" target="_blank" rel="noopener">MultiIndex</a>，这是因为在 groupby 的时候包含一个默认属性 <code>as_index=True</code> 这样的好处有两点：</p><ol><li>加快运算速度</li><li>方便进一步的操作</li></ol><p>举例来说：<br></p><figure class="highlight python"><table><tr><td class="code"><pre><span class="line">In [<span class="number">13</span>]: df = pd.DataFrame(data = &#123;<span class="number">1</span>:[<span class="string">'a'</span>,<span class="string">'a'</span>,<span class="string">'b'</span>,<span class="string">'c'</span>,<span class="string">'a'</span>],<span class="number">2</span>:[<span class="string">'b'</span>,<span class="string">'b'</span>,<span class="string">'a'</span>,<span class="string">'d'</span>,<span class="string">'c</span></span><br><span class="line"><span class="string">    ...: '</span>],<span class="number">3</span>:[<span class="number">1</span>,<span class="number">1</span>,<span class="number">1</span>,<span class="number">1</span>,<span class="number">1</span>]&#125;)</span><br><span class="line"></span><br><span class="line">In [<span class="number">14</span>]: df</span><br><span class="line">Out[<span class="number">14</span>]:</span><br><span class="line">   <span class="number">1</span>  <span class="number">2</span>  <span class="number">3</span></span><br><span class="line"><span class="number">0</span>  a  b  <span class="number">1</span></span><br><span class="line"><span class="number">1</span>  a  b  <span class="number">1</span></span><br><span class="line"><span class="number">2</span>  b  a  <span class="number">1</span></span><br><span class="line"><span class="number">3</span>  c  d  <span class="number">1</span></span><br><span class="line"><span class="number">4</span>  a  c  <span class="number">1</span></span><br><span class="line"></span><br><span class="line">In [<span class="number">19</span>]: df.groupby([<span class="number">1</span>,<span class="number">2</span>]).sum()</span><br><span class="line">Out[<span class="number">19</span>]:</span><br><span class="line">     <span class="number">3</span></span><br><span class="line"><span class="number">1</span> <span class="number">2</span></span><br><span class="line">a b  <span class="number">2</span></span><br><span class="line">  c  <span class="number">1</span></span><br><span class="line">b a  <span class="number">1</span></span><br><span class="line">c d  <span class="number">1</span></span><br><span class="line"></span><br><span class="line">In [<span class="number">20</span>]: df.groupby([<span class="number">1</span>,<span class="number">2</span>],as_index=<span class="keyword">False</span>).sum()</span><br><span class="line">Out[<span class="number">20</span>]:</span><br><span class="line">   <span class="number">1</span>  <span class="number">2</span>  <span class="number">3</span></span><br><span class="line"><span class="number">0</span>  a  b  <span class="number">2</span></span><br><span class="line"><span class="number">1</span>  a  c  <span class="number">1</span></span><br><span class="line"><span class="number">2</span>  b  a  <span class="number">1</span></span><br><span class="line"><span class="number">3</span>  c  d  <span class="number">1</span></span><br></pre></td></tr></table></figure><p></p><p>而利用 <code>reset_index()</code> 可以达到同样的效果：</p><figure class="highlight python"><table><tr><td class="code"><pre><span class="line">In [<span class="number">24</span>]: df.groupby([<span class="number">1</span>,<span class="number">2</span>]).sum().reset_index()</span><br><span class="line">Out[<span class="number">24</span>]:</span><br><span class="line">   <span class="number">1</span>  <span class="number">2</span>  <span class="number">3</span></span><br><span class="line"><span class="number">0</span>  a  b  <span class="number">2</span></span><br><span class="line"><span class="number">1</span>  a  c  <span class="number">1</span></span><br><span class="line"><span class="number">2</span>  b  a  <span class="number">1</span></span><br><span class="line"><span class="number">3</span>  c  d  <span class="number">1</span></span><br></pre></td></tr></table></figure><div class="note danger"><p>但是对于 <code>.size()</code> 来说，设置 <code>reset_index()=False</code> 并没有效果，还是需要用 <code>reset_index()</code>，实际上，<code>DataFrameGroupBy</code> 对象 内置的<code>.size()</code> 方法返回的是一个 <code>Series</code> 对象而不是 <code>DataFrame</code></p></div><figure class="highlight python"><table><tr><td class="code"><pre><span class="line">In [<span class="number">18</span>]: df.groupby([<span class="number">1</span>,<span class="number">2</span>],as_index=<span class="keyword">False</span>).size() <span class="comment"># 依旧是 MultiIndex</span></span><br><span class="line">Out[<span class="number">18</span>]:</span><br><span class="line"><span class="number">1</span>  <span class="number">2</span></span><br><span class="line">a  b    <span class="number">2</span></span><br><span class="line">   c    <span class="number">1</span></span><br><span class="line">b  a    <span class="number">1</span></span><br><span class="line">c  d    <span class="number">1</span></span><br><span class="line">dtype: int64</span><br><span class="line"></span><br><span class="line">In [<span class="number">25</span>]: df.groupby([<span class="number">1</span>,<span class="number">2</span>]).size().reset_index()</span><br><span class="line">Out[<span class="number">25</span>]:</span><br><span class="line">   <span class="number">1</span>  <span class="number">2</span>  <span class="number">0</span></span><br><span class="line"><span class="number">0</span>  a  b  <span class="number">2</span></span><br><span class="line"><span class="number">1</span>  a  c  <span class="number">1</span></span><br><span class="line"><span class="number">2</span>  b  a  <span class="number">1</span></span><br><span class="line"><span class="number">3</span>  c  d  <span class="number">1</span></span><br></pre></td></tr></table></figure><p>若要将统计的 size 成为新的一列，可以使用 <code>.to_frame</code> 方法生成新的一列： <code>df = df.groupby([&#39;A&#39;,&#39;B&#39;]).size().to_frame(&#39;size&#39;)</code></p><h3 id="转换与应用"><a href="#转换与应用" class="headerlink" title="转换与应用"></a>转换与应用</h3><p><code>apply()</code> 方法让你可以在每个组上应用任意方法。这个函数输入一个 <code>DataFrame</code>，返回一个 <code>Pandas</code> 对象（ <code>DataFrame</code> 或 <code>Series</code> ）或一个标量（ <code>scalar</code>，单个数值），新版的 <code>Pandas</code> 可以 放入 <code>apply</code> 的参数，例如：<code>df.apply(f,alpha=0.1)</code></p><p>-[]<a href="http://pandas.pydata.org/pandas-docs/stable/user_guide/groupby.html#transformation" target="_blank" rel="noopener">这里开始</a></p><h2 id="拾遗"><a href="#拾遗" class="headerlink" title="拾遗"></a>拾遗</h2><div class="note primary"><h3 id="axis-取-0-还是-1？"><a href="#axis-取-0-还是-1？" class="headerlink" title="axis 取 0 还是 1？"></a>axis 取 0 还是 1？</h3><ul><li><code>axis=1</code> 表示按照行（index）的方向来，也就是说函数的输入为每一行，同理，<code>axis=0</code> 表示按照列（column）的方向来，也就是说函数的输入为每一列。</li><li><code>df.apply()</code> 输入 <code>0</code> 表示 apply 到每一列上去，输入 <code>1</code> 表示 apply 到每一行上去。</li><li><code>sum(axis=1)</code> 表示按行求和，<code>sum(axis=0)</code> 表示按列求和</li><li><code>drop(axis = 1)</code> 删除列</li></ul></div><div class="note primary"><h3 id="正则表达式"><a href="#正则表达式" class="headerlink" title="正则表达式"></a>正则表达式</h3><ul><li>从开头匹配：表达式最前面加上<code>^</code></li><li>匹配年份：<code>(?!0000)[0-9]{4}</code></li></ul></div><div class="note primary"><h3 id="字符串"><a href="#字符串" class="headerlink" title="字符串"></a>字符串</h3><ul><li><code>Series.str</code> 可以广播某一字符串方法，适用于整个列或者行，而避免用 <code>apply</code> 函数.</li><li>在某一列寻找包含某一字符串 <code>&#39;str&#39;</code> 的数据：<code>df[df[&#39;content&#39;].str.contains(&#39;str&#39;, na=False)]</code>，由于 <code>contains</code> 返回布尔型数据，前面要再加上一个 <code>df</code>, <code>na=False</code> 表示若遇到缺失数据返回 <code>False</code>.</li><li><code>strip()</code> 方法能用于删除开始或结尾的字符。 <code>lstrip()</code> 和 <code>rstrip()</code> 分别从左和从右执行删除操作。 默认情况下，这些方法会去除空白字符，但是你也可以指定其他字符.</li></ul></div><h2 id="时间序列操作"><a href="#时间序列操作" class="headerlink" title="时间序列操作"></a>时间序列操作</h2><ul><li><strong>生成固定日期的时间序列</strong>：<code>pd.date_range</code></li><li><strong>生成固定时间段的时间序列</strong>：<code>pd.date_range</code></li></ul><h2 id="Kaggle-数据竞赛常用命令"><a href="#Kaggle-数据竞赛常用命令" class="headerlink" title="Kaggle 数据竞赛常用命令"></a>Kaggle 数据竞赛常用命令</h2><ul><li><code>pandas.Series.factorize()</code>：返回一个 tuple，对于数据的某一列为种类属性，将里面的类别映射成数字:<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">In [<span class="number">0</span>]: labels, uniques = pd.factorize([<span class="string">'b'</span>, <span class="string">'b'</span>, <span class="string">'a'</span>, <span class="string">'c'</span>, <span class="string">'b'</span>])</span><br><span class="line"></span><br><span class="line">In [<span class="number">1</span>]: labels</span><br><span class="line">Out[<span class="number">1</span>]: array([<span class="number">0</span>, <span class="number">0</span>, <span class="number">1</span>, <span class="number">2</span>, <span class="number">0</span>])</span><br><span class="line"></span><br><span class="line">In [<span class="number">2</span>]: uniques</span><br><span class="line">Out[<span class="number">2</span>]: array([<span class="string">'b'</span>, <span class="string">'a'</span>, <span class="string">'c'</span>], dtype=object)</span><br></pre></td></tr></table></figure>这个命令一般用于数据探索阶段，例如当给定的数据不知道是否为 categorical 类型的数据时，可以先进行一个映射：<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># Label encoder</span></span><br><span class="line"><span class="keyword">for</span> c <span class="keyword">in</span> train.columns[train.dtypes == <span class="string">'object'</span>]:</span><br><span class="line">    X[c] = X[c].factorize()[<span class="number">0</span>]</span><br></pre></td></tr></table></figure></li><li>将训练集中的特征进行区分：<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">cat_cols = list(train.select_dtypes(include=[<span class="string">'object'</span>]).columns)</span><br><span class="line">num_cols = list(train.select_dtypes(exclude=[<span class="string">'object'</span>]).columns)</span><br></pre></td></tr></table></figure></li></ul></div><div><ul class="post-copyright"><li class="post-copyright-author"><strong>本文作者： </strong>H.N.Yang</li><li class="post-copyright-link"><strong>本文链接：</strong> <a href="https://yanghn.com/posts/55796/" title="Pandas 常用核心函数与方法">https://yanghn.com/posts/55796/</a></li><li class="post-copyright-license"><strong>版权声明： </strong>本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" rel="noopener" target="_blank"><i class="fa fa-fw fa-creative-commons"></i>BY-NC-SA</a> 许可协议。转载请注明出处！</li></ul></div><footer class="post-footer"><div class="post-nav"><div class="post-nav-next post-nav-item"><a href="/posts/54421/" rel="next" title="Jupyter Notebook 使用方法记录"><i class="fa fa-chevron-left"></i> Jupyter Notebook 使用方法记录</a></div><span class="post-nav-divider"></span><div class="post-nav-prev post-nav-item"><a href="/posts/53355/" rel="prev" title="NetworkX 笔记">NetworkX 笔记 <i class="fa fa-chevron-right"></i></a></div></div></footer></div></article></div></div></div><div class="sidebar-toggle"><div class="sidebar-toggle-line-wrap"><span class="sidebar-toggle-line sidebar-toggle-line-first"></span> <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span> <span class="sidebar-toggle-line sidebar-toggle-line-last"></span></div></div><aside id="sidebar" class="sidebar"><div class="sidebar-inner"><ul class="sidebar-nav motion-element"><li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">文章目录</li><li class="sidebar-nav-overview" data-target="site-overview-wrap">站点概览</li></ul><div class="site-overview-wrap sidebar-panel"><div class="site-overview"><div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person"><img class="site-author-image" itemprop="image" src="/images/header.jpg" alt="H.N.Yang"><p class="site-author-name" itemprop="name">H.N.Yang</p><p class="site-description motion-element" itemprop="description"></p></div><nav class="site-state motion-element"><div class="site-state-item site-state-posts"><a href="/archives/"><span class="site-state-item-count">9</span> <span class="site-state-item-name">日志</span></a></div><div class="site-state-item site-state-categories"><a href="/categories/index.html"><span class="site-state-item-count">4</span> <span class="site-state-item-name">分类</span></a></div><div class="site-state-item site-state-tags"><a href="/tags/index.html"><span class="site-state-item-count">10</span> <span class="site-state-item-name">标签</span></a></div></nav><div class="links-of-author motion-element"><span class="links-of-author-item"><a href="https://github.com/hnyang1107" title="GitHub &rarr; https://github.com/hnyang1107" rel="noopener" target="_blank"><i class="fa fa-fw fa-github"></i>GitHub</a> </span><span class="links-of-author-item"><a href="mailto:haonyang@163.com" title="E-Mail &rarr; mailto:haonyang@163.com" rel="noopener" target="_blank"><i class="fa fa-fw fa-envelope"></i>E-Mail</a></span></div></div></div><div class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active"><div class="post-toc"><div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#数据选取、索引、采集"><span class="nav-number">1.</span> <span class="nav-text">数据选取、索引、采集</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#数据修改、删除、映射"><span class="nav-number">2.</span> <span class="nav-text">数据修改、删除、映射</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#数据合并、连接、关系"><span class="nav-number">3.</span> <span class="nav-text">数据合并、连接、关系</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Concat-与-Append-操作"><span class="nav-number">3.1.</span> <span class="nav-text">Concat 与 Append 操作</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Merge-操作"><span class="nav-number">3.2.</span> <span class="nav-text">Merge 操作</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Group-By-技术"><span class="nav-number">4.</span> <span class="nav-text">Group By 技术</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#分割"><span class="nav-number">4.1.</span> <span class="nav-text">分割</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#应用"><span class="nav-number">5.</span> <span class="nav-text">应用</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#累计与求和"><span class="nav-number">5.1.</span> <span class="nav-text">累计与求和</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#转换与应用"><span class="nav-number">5.2.</span> <span class="nav-text">转换与应用</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#拾遗"><span class="nav-number">6.</span> <span class="nav-text">拾遗</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#axis-取-0-还是-1？"><span class="nav-number">6.1.</span> <span class="nav-text">axis 取 0 还是 1？</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#正则表达式"><span class="nav-number">6.2.</span> <span class="nav-text">正则表达式</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#字符串"><span class="nav-number">6.3.</span> <span class="nav-text">字符串</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#时间序列操作"><span class="nav-number">7.</span> <span class="nav-text">时间序列操作</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Kaggle-数据竞赛常用命令"><span class="nav-number">8.</span> <span class="nav-text">Kaggle 数据竞赛常用命令</span></a></li></ol></div></div></div></div></aside></div></main><footer id="footer" class="footer"><div class="footer-inner"><div class="copyright"><a href="http://beian.miit.gov.cn/" rel="noopener" target="_blank">赣ICP备19011924号 </a>&copy; <span itemprop="copyrightYear">2019</span> <span class="with-love" id="animate"><i class="fa fa-user"></i> </span><span class="author" itemprop="copyrightHolder">H.N.Yang</span></div></div></footer><div class="back-to-top"><i class="fa fa-arrow-up"></i> <span id="scrollpercent"><span>0</span>%</span></div></div><script>"[object Function]"!==Object.prototype.toString.call(window.Promise)&&(window.Promise=null)</script><script color="0,0,0" opacity="0.5" zindex="-1" count="199" src="/lib/canvas-nest/canvas-nest-nomobile.min.js"></script><script src="/lib/jquery/index.js?v=2.1.3"></script><script src="/lib/velocity/velocity.min.js?v=1.2.1"></script><script src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script><script src="/js/src/utils.js?v=6.7.0"></script><script src="/js/src/motion.js?v=6.7.0"></script><script src="/js/src/affix.js?v=6.7.0"></script><script src="/js/src/schemes/pisces.js?v=6.7.0"></script><script src="/js/src/scrollspy.js?v=6.7.0"></script><script src="/js/src/post-details.js?v=6.7.0"></script><script src="/js/src/bootstrap.js?v=6.7.0"></script><script>// Popup Window;
+    var isfetched = false;
+    var isXml = true;
+    // Search DB path;
+    var search_path = "search.xml";
+    if (search_path.length === 0) {
+      search_path = "search.xml";
+    } else if (/json$/i.test(search_path)) {
+      isXml = false;
+    }
+    var path = "/" + search_path;
+    // monitor main search box;
+
+    var onPopupClose = function (e) {
+      $('.popup').hide();
+      $('#local-search-input').val('');
+      $('.search-result-list').remove();
+      $('#no-result').remove();
+      $(".local-search-pop-overlay").remove();
+      $('body').css('overflow', '');
+    }
+
+    function proceedsearch() {
+      $("body")
+        .append('<div class="search-popup-overlay local-search-pop-overlay"></div>')
+        .css('overflow', 'hidden');
+      $('.search-popup-overlay').click(onPopupClose);
+      $('.popup').toggle();
+      var $localSearchInput = $('#local-search-input');
+      $localSearchInput.attr("autocapitalize", "none");
+      $localSearchInput.attr("autocorrect", "off");
+      $localSearchInput.focus();
+    }
+
+    // search function;
+    var searchFunc = function(path, search_id, content_id) {
+      'use strict';
+
+      // start loading animation
+      $("body")
+        .append('<div class="search-popup-overlay local-search-pop-overlay">' +
+          '<div id="search-loading-icon">' +
+          '<i class="fa fa-spinner fa-pulse fa-5x fa-fw"></i>' +
+          '</div>' +
+          '</div>')
+        .css('overflow', 'hidden');
+      $("#search-loading-icon").css('margin', '20% auto 0 auto').css('text-align', 'center');
+
+      
+
+      $.ajax({
+        url: path,
+        dataType: isXml ? "xml" : "json",
+        async: true,
+        success: function(res) {
+          // get the contents from search data
+          isfetched = true;
+          $('.popup').detach().appendTo('.header-inner');
+          var datas = isXml ? $("entry", res).map(function() {
+            return {
+              title: $("title", this).text(),
+              content: $("content",this).text(),
+              url: $("url" , this).text()
+            };
+          }).get() : res;
+          var input = document.getElementById(search_id);
+          var resultContent = document.getElementById(content_id);
+          var inputEventFunction = function() {
+            var searchText = input.value.trim().toLowerCase();
+            var keywords = searchText.split(/[\s\-]+/);
+            if (keywords.length > 1) {
+              keywords.push(searchText);
+            }
+            var resultItems = [];
+            if (searchText.length > 0) {
+              // perform local searching
+              datas.forEach(function(data) {
+                var isMatch = false;
+                var hitCount = 0;
+                var searchTextCount = 0;
+                var title = data.title.trim();
+                var titleInLowerCase = title.toLowerCase();
+                var content = data.content.trim().replace(/<[^>]+>/g,"");
+                
+                var contentInLowerCase = content.toLowerCase();
+                var articleUrl = decodeURIComponent(data.url).replace(/\/{2,}/g, '/');
+                var indexOfTitle = [];
+                var indexOfContent = [];
+                // only match articles with not empty titles
+                if(title != '') {
+                  keywords.forEach(function(keyword) {
+                    function getIndexByWord(word, text, caseSensitive) {
+                      var wordLen = word.length;
+                      if (wordLen === 0) {
+                        return [];
+                      }
+                      var startPosition = 0, position = [], index = [];
+                      if (!caseSensitive) {
+                        text = text.toLowerCase();
+                        word = word.toLowerCase();
+                      }
+                      while ((position = text.indexOf(word, startPosition)) > -1) {
+                        index.push({position: position, word: word});
+                        startPosition = position + wordLen;
+                      }
+                      return index;
+                    }
+
+                    indexOfTitle = indexOfTitle.concat(getIndexByWord(keyword, titleInLowerCase, false));
+                    indexOfContent = indexOfContent.concat(getIndexByWord(keyword, contentInLowerCase, false));
+                  });
+                  if (indexOfTitle.length > 0 || indexOfContent.length > 0) {
+                    isMatch = true;
+                    hitCount = indexOfTitle.length + indexOfContent.length;
+                  }
+                }
+
+                // show search results
+
+                if (isMatch) {
+                  // sort index by position of keyword
+
+                  [indexOfTitle, indexOfContent].forEach(function (index) {
+                    index.sort(function (itemLeft, itemRight) {
+                      if (itemRight.position !== itemLeft.position) {
+                        return itemRight.position - itemLeft.position;
+                      } else {
+                        return itemLeft.word.length - itemRight.word.length;
+                      }
+                    });
+                  });
+
+                  // merge hits into slices
+
+                  function mergeIntoSlice(text, start, end, index) {
+                    var item = index[index.length - 1];
+                    var position = item.position;
+                    var word = item.word;
+                    var hits = [];
+                    var searchTextCountInSlice = 0;
+                    while (position + word.length <= end && index.length != 0) {
+                      if (word === searchText) {
+                        searchTextCountInSlice++;
+                      }
+                      hits.push({position: position, length: word.length});
+                      var wordEnd = position + word.length;
+
+                      // move to next position of hit
+
+                      index.pop();
+                      while (index.length != 0) {
+                        item = index[index.length - 1];
+                        position = item.position;
+                        word = item.word;
+                        if (wordEnd > position) {
+                          index.pop();
+                        } else {
+                          break;
+                        }
+                      }
+                    }
+                    searchTextCount += searchTextCountInSlice;
+                    return {
+                      hits: hits,
+                      start: start,
+                      end: end,
+                      searchTextCount: searchTextCountInSlice
+                    };
+                  }
+
+                  var slicesOfTitle = [];
+                  if (indexOfTitle.length != 0) {
+                    slicesOfTitle.push(mergeIntoSlice(title, 0, title.length, indexOfTitle));
+                  }
+
+                  var slicesOfContent = [];
+                  while (indexOfContent.length != 0) {
+                    var item = indexOfContent[indexOfContent.length - 1];
+                    var position = item.position;
+                    var word = item.word;
+                    // cut out 100 characters
+                    var start = position - 20;
+                    var end = position + 80;
+                    if(start < 0){
+                      start = 0;
+                    }
+                    if (end < position + word.length) {
+                      end = position + word.length;
+                    }
+                    if(end > content.length){
+                      end = content.length;
+                    }
+                    slicesOfContent.push(mergeIntoSlice(content, start, end, indexOfContent));
+                  }
+
+                  // sort slices in content by search text's count and hits' count
+
+                  slicesOfContent.sort(function (sliceLeft, sliceRight) {
+                    if (sliceLeft.searchTextCount !== sliceRight.searchTextCount) {
+                      return sliceRight.searchTextCount - sliceLeft.searchTextCount;
+                    } else if (sliceLeft.hits.length !== sliceRight.hits.length) {
+                      return sliceRight.hits.length - sliceLeft.hits.length;
+                    } else {
+                      return sliceLeft.start - sliceRight.start;
+                    }
+                  });
+
+                  // select top N slices in content
+
+                  var upperBound = parseInt('1');
+                  if (upperBound >= 0) {
+                    slicesOfContent = slicesOfContent.slice(0, upperBound);
+                  }
+
+                  // highlight title and content
+
+                  function highlightKeyword(text, slice) {
+                    var result = '';
+                    var prevEnd = slice.start;
+                    slice.hits.forEach(function (hit) {
+                      result += text.substring(prevEnd, hit.position);
+                      var end = hit.position + hit.length;
+                      result += '<b class="search-keyword">' + text.substring(hit.position, end) + '</b>';
+                      prevEnd = end;
+                    });
+                    result += text.substring(prevEnd, slice.end);
+                    return result;
+                  }
+
+                  var resultItem = '';
+
+                  if (slicesOfTitle.length != 0) {
+                    resultItem += "<li><a href='" + articleUrl + "' class='search-result-title'>" + highlightKeyword(title, slicesOfTitle[0]) + "</a>";
+                  } else {
+                    resultItem += "<li><a href='" + articleUrl + "' class='search-result-title'>" + title + "</a>";
+                  }
+
+                  slicesOfContent.forEach(function (slice) {
+                    resultItem += "<a href='" + articleUrl + "'>" +
+                      "<p class=\"search-result\">" + highlightKeyword(content, slice) +
+                      "...</p>" + "</a>";
+                  });
+
+                  resultItem += "</li>";
+                  resultItems.push({
+                    item: resultItem,
+                    searchTextCount: searchTextCount,
+                    hitCount: hitCount,
+                    id: resultItems.length
+                  });
+                }
+              })
+            };
+            if (keywords.length === 1 && keywords[0] === "") {
+              resultContent.innerHTML = '<div id="no-result"><i class="fa fa-search fa-5x"></i></div>'
+            } else if (resultItems.length === 0) {
+              resultContent.innerHTML = '<div id="no-result"><i class="fa fa-frown-o fa-5x"></i></div>'
+            } else {
+              resultItems.sort(function (resultLeft, resultRight) {
+                if (resultLeft.searchTextCount !== resultRight.searchTextCount) {
+                  return resultRight.searchTextCount - resultLeft.searchTextCount;
+                } else if (resultLeft.hitCount !== resultRight.hitCount) {
+                  return resultRight.hitCount - resultLeft.hitCount;
+                } else {
+                  return resultRight.id - resultLeft.id;
+                }
+              });
+              var searchResultList = '<ul class=\"search-result-list\">';
+              resultItems.forEach(function (result) {
+                searchResultList += result.item;
+              })
+              searchResultList += "</ul>";
+              resultContent.innerHTML = searchResultList;
+            }
+          }
+
+          if ('auto' === 'auto') {
+            input.addEventListener('input', inputEventFunction);
+          } else {
+            $('.search-icon').click(inputEventFunction);
+            input.addEventListener('keypress', function (event) {
+              if (event.keyCode === 13) {
+                inputEventFunction();
+              }
+            });
+          }
+
+          // remove loading animation
+          $(".local-search-pop-overlay").remove();
+          $('body').css('overflow', '');
+
+          proceedsearch();
+        }
+      });
+    }
+
+    // handle and trigger popup window;
+    $('.popup-trigger').click(function(e) {
+      e.stopPropagation();
+      if (isfetched === false) {
+        searchFunc(path, 'local-search-input', 'local-search-result');
+      } else {
+        proceedsearch();
+      };
+    });
+
+    $('.popup-btn-close').click(onPopupClose);
+    $('.popup').click(function(e){
+      e.stopPropagation();
+    });
+    $(document).on('keyup', function (event) {
+      var shouldDismissSearchPopup = event.which === 27 &&
+        $('.search-popup').is(':visible');
+      if (shouldDismissSearchPopup) {
+        onPopupClose();
+      }
+    });</script><script>!function(){var t=document.createElement("script"),e=window.location.protocol.split(":")[0];t.src="https"===e?"https://zz.bdstatic.com/linksubmit/push.js":"http://push.zhanzhang.baidu.com/push.js";var s=document.getElementsByTagName("script")[0];s.parentNode.insertBefore(t,s)}()</script></body></html>
