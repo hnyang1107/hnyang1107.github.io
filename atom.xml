@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://yanghn.com/"/>
-  <updated>2020-01-04T13:32:49.893Z</updated>
+  <updated>2020-01-04T13:40:56.549Z</updated>
   <id>https://yanghn.com/</id>
   
   <author>
@@ -21,9 +21,9 @@
     <link href="https://yanghn.com/posts/33807/"/>
     <id>https://yanghn.com/posts/33807/</id>
     <published>2020-01-04T12:23:08.000Z</published>
-    <updated>2020-01-04T13:32:49.893Z</updated>
+    <updated>2020-01-04T13:40:56.549Z</updated>
     
-    <content type="html"><![CDATA[<p class="description">“A powerful discriminative classifier defined by a separating hyperplane”</p><p><img src="" alt="" style="width:85%"></p><a id="more"></a><div class="note primary"><h3><span id="文章目录">文章目录</span></h3><ul><li><a href="#1-svm-基本型">1. SVM 基本型</a><ul><li><a href="#11-线性可分">1.1 线性可分</a></li></ul></li></ul></div><h2><span id="1-svm-基本型">1. SVM 基本型</span></h2><h3><span id="11-线性可分">1.1 线性可分</span></h3><p>考虑的是一个两类的分类问题，数据点用 $\boldsymbol{x}$ 来表示，这是一个 $n$ 维向量，而类别用 $y$ 来表示，可以取 $0$ 或者 $-1$ ，分别代表两个不同的类（不同于 Logistics Regression 的 $0,1$ 有概率意义，这里只是为了方便 SVM 的推导）. 一个线性分类器就是要在 $n$ 维的数据空间中找到一个 $n-1$ 维的<strong>超平面</strong>，其方程可以表示为<br>$$<br>w^{T}\boldsymbol{x}+b=0<br>$$</p><blockquote><p>一般我们的向量没有加以说明都是指的列向量，所以这里乘法指的是矩阵乘法</p></blockquote><p>我们希望这个超平面能够把这两类数据分开来，一边函数值大于 $0$ 为一类一边小于 $0$ 为一类，如果等于 $0$ 则没有办法判断到底属于哪一类，如下图所示</p><p><img src="https://hnyang.oss-cn-shanghai.aliyuncs.com/2020-01-04-131029.png" width="50%" height="80%"></p><p>图中为二维空间的点，我们的目标是找到一个一维空间的超平面（直线）将两类样本分开，这个超平面有两个基本性质：<br></p><div class="note warning no-icon"><ul><li>超平面乘上不为 $0$ 的系数 $\lambda$ 也是同一个超平面 $\lambda (w^{T}\boldsymbol{x}+b)=0$</li><li>$w$ 是超平面的法向量</li></ul></div><br>对于第一点的证明是显然的，而第二点对后面推导几何间距有用，直观上，可<p></p><p>##</p><p>##</p>]]></content>
+    <content type="html"><![CDATA[<p class="description">“A powerful discriminative classifier defined by a separating hyperplane”</p><p><img src="" alt="" style="width:85%"></p><a id="more"></a><div class="note primary"><h3><span id="文章目录">文章目录</span></h3><ul><li><a href="#1-svm-基本型">1. SVM 基本型</a><ul><li><a href="#11-线性可分">1.1 线性可分</a></li><li><a href="#函数间隔与几何间隔">函数间隔与几何间隔</a></li></ul></li></ul></div><h2><span id="1-svm-基本型">1. SVM 基本型</span></h2><h3><span id="11-线性可分">1.1 线性可分</span></h3><p>考虑的是一个两类的分类问题，数据点用 $\boldsymbol{x}$ 来表示，这是一个 $n$ 维向量，而类别用 $y$ 来表示，可以取 $0$ 或者 $-1$ ，分别代表两个不同的类（不同于 Logistics Regression 的 $0,1$ 有概率意义，这里只是为了方便 SVM 的推导）. 一个线性分类器就是要在 $n$ 维的数据空间中找到一个 $n-1$ 维的<strong>超平面</strong>，其方程可以表示为<br>$$<br>w^{T}\boldsymbol{x}+b=0<br>$$</p><blockquote><p>一般我们的向量没有加以说明都是指的列向量，所以这里乘法指的是矩阵乘法</p></blockquote><p>我们希望这个超平面能够把这两类数据分开来，一边函数值大于 $0$ 为一类一边小于 $0$ 为一类，如果等于 $0$ 则没有办法判断到底属于哪一类，如下图所示</p><p><img src="https://hnyang.oss-cn-shanghai.aliyuncs.com/2020-01-04-131029.png" width="50%" height="80%"></p><p>图中为二维空间的点，我们的目标是找到一个一维空间的超平面（直线）将两类样本分开，这个超平面有两个基本性质：<br></p><div class="note warning no-icon"><ul><li>超平面乘上不为 $0$ 的系数 $\lambda$ 也是同一个超平面 $\lambda (w^{T}\boldsymbol{x}+b)=0$</li><li>$w$ 是超平面的法向量</li></ul></div><br>对于第一点的证明是显然的，而第二点对后面推导几何间距有用，这里给出一个简单的证明：对任意超平面上的两点 $\boldsymbol{x_1},\boldsymbol{x_2}$ 都会有 $w^{T}(\boldsymbol{x_1}-\boldsymbol{x_2})=0$ 成立，也就是说对于任意属于超平面的向量 $(\boldsymbol{x_1}-\boldsymbol{x_2})$ 都与 $w$ 正交，所以 $w$ 是超平面的法向量.<br>所以我们的目标是定义和找到合适的 $w,b$ 来达到我们分离两类样本的目的<p></p><h3><span id="函数间隔与几何间隔">函数间隔与几何间隔</span></h3><p>##</p><p>##</p>]]></content>
     
     <summary type="html">
     
