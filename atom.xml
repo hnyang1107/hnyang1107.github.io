@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
-  <title>FreeMind</title>
+  <title>FreeMind 博客</title>
   
   <subtitle>「静水深流」</subtitle>
   <link href="/atom.xml" rel="self"/>
