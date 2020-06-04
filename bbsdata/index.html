@@ -132,7 +132,7 @@
                 <p>Our data file is encoded in UTF-8. If you are using pandas, you can follow the scripts below to read our data:
                <blockquote>
                     <p><code>from pandas import read_csv</br>
-                            df = pd.read_csv('file_name.csv', index_col='post_time', parse_dates=['post_time'],
+                            df = read_csv('file_name.csv', index_col='post_time', parse_dates=['post_time'],
                             infer_datetime_format=True)</code></p>
                 </blockquote>
             
